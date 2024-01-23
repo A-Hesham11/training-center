@@ -10,6 +10,8 @@ import BestTrainers from "../components/bestTrainers/BestTrainers";
 import Trainer_1 from "../assets/trainer_1.jpg";
 import Trainer_2 from "../assets/trainer_2.jpg";
 import Trainer_3 from "../assets/trainer_3.jpg";
+import PersonalGoals from "../components/learnSkills/PersonalGoals";
+import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
 
 const HomePage = () => {
   const goodCourses = [
@@ -19,6 +21,7 @@ const HomePage = () => {
       alt: "Nursing",
       title: "دورة التهيئه لاختبار التمريض البرومترك السعودي",
       price: "",
+      titleBtn: "سجل الان ",
     },
     {
       id: 2,
@@ -26,6 +29,7 @@ const HomePage = () => {
       alt: "Makeup",
       title: "60+ كورس متنوع",
       price: "700 ريال",
+      titleBtn: "سجل الان ",
     },
   ];
 
@@ -57,7 +61,7 @@ const HomePage = () => {
   ];
 
   return (
-    <main>
+    <main className="relative">
       <div className="landing_img h-full">
         <LandingHome />
       </div>
@@ -67,7 +71,7 @@ const HomePage = () => {
       </div>
 
       <div className="container">
-        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center">
+        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
           دورات مميزة
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
@@ -78,17 +82,18 @@ const HomePage = () => {
               alt={course.alt}
               title={course.title}
               price={course.price}
+              titleBtn={course.titleBtn}
             />
           ))}
         </div>
       </div>
 
-      <div>
+      <div className="mt-20">
         <LearnNewSkills />
       </div>
 
       <div className="container">
-        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center">
+        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
           أفضل المدربين
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
@@ -103,6 +108,12 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+
+      <div className="mt-16">
+        <PersonalGoals />
+      </div>
+
+      <ButtonGoUp  />
     </main>
   );
 };

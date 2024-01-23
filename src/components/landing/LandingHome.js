@@ -9,7 +9,7 @@ const LandingHome = () => {
 
   useEffect(() => {
     // Initialize AOS library after the component is mounted
-    AOS.init({ duration: 1500, once: true });
+    AOS.init({ duration: 1200, once: true });
   }, []);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const LandingHome = () => {
   return (
     <header className="relative">
       <img src={LandingHomeImg} alt="landing" className="h-screen" />
-      <div className="fixed top-0 w-full">
+      <div className="fixed top-0 w-full z-50">
         <NavBar />
       </div>
       <div className="container">
@@ -37,7 +37,7 @@ const LandingHome = () => {
                 نقدم الدورات التدريبية التطويرية في المجال الصحي ومجال الإعلام
                 التي تساهم في تطوير الكوادر البشرية لتكون مؤهله لبيئة العمل.
               </p>
-              <button className="bg-mainOrange text-white py-4 px-6 rounded-xl font-bold">
+              <button className="btn bg-mainOrange text-white py-4 px-6 rounded-xl font-bold">
                 المنصة التعليمية
               </button>
             </div>
