@@ -13,7 +13,6 @@ const AllRoutesProvider = () => {
     <Routes>
       <Route path="/" element={
         <Fragment>
-            <NavBar />
             <HomePage />
             <Footer />
         </Fragment>
