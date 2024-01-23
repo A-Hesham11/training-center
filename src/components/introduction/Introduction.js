@@ -32,7 +32,7 @@ const Introduction = () => {
     <div className='container'>
         <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5'>
             {introductionData.map((item) => (
-                <div className='flex gap-5 items-center bg-white rounded-[20px] p-4 shadow-xl '>
+                <div key={item.id} className='flex gap-5 items-center bg-white rounded-[20px] p-4 shadow-xl' data-aos="zoom-in-up">
                     <img src={item.image} alt={item.alt}/>
                     <div className='flex gap-1 flex-col'>
                         <h2 className='font-bold text-xl text-mainBlack'>{item.title}</h2>

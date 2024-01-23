@@ -17,30 +17,26 @@ const AllRoutesProvider = () => {
             <Footer />
         </Fragment>
       } />
-      <Route path="/courses" element={
+      <Route path="/الدورات" element={
         <Fragment>
-            <NavBar />
             <Courses />
             <Footer />
         </Fragment>
       } />
-      <Route path="/trainers" element={
+      <Route path="/المدربين" element={
         <Fragment>
-            <NavBar />
             <Trainers />
             <Footer />
         </Fragment>
       } />
-      <Route path="/aboutUs" element={
+      <Route path="/من_نحن" element={
         <Fragment>
-            <NavBar />
             <AboutUs />
             <Footer />
         </Fragment>
       } />
-      <Route path="/callUs" element={
+      <Route path="/إتصل_بنا" element={
         <Fragment>
-            <NavBar />
             <CallUs />
             <Footer />
         </Fragment>
