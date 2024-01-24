@@ -85,10 +85,10 @@ const NavBar = () => {
               </li>
             ))}
             <li className="col-span-1 lg:col-span-2 text-center w-max m-auto nav_list">
-              <button className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row">
+              <Link to="/التسجيل" className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row">
                 <FaRegUserCircle className="w-full size-7 mb-1 lg:size-5 lg:mb-0" />
                 <span>تسجيل / دخول</span>
-              </button>
+              </Link>
             </li>
           </ul>
           <button

@@ -136,6 +136,11 @@ body {
   color: #030304;
 }
 
+.login_list:focus,
+.login_list:hover {
+  color: #dc715d;
+}
+
 .footer_list:focus:after,
 .nav_list:focus:after,
 .footer_list:hover:after,
@@ -164,6 +169,10 @@ body {
 
 .footer_list:after {
   background-color: #fff;
+}
+
+.login_list:after {
+  background-color: #dc715d;
 }
 
 .label-float{

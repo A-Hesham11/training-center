@@ -7,6 +7,8 @@ import Courses from "../../pages/Courses";
 import Trainers from "../../pages/Trainers";
 import AboutUs from "../../pages/AboutUs";
 import CallUs from "../../pages/CallUs";
+import SignInForm from "../../pages/SignInForm";
+import RegisterForm from "../../pages/RegisterForm";
 
 const AllRoutesProvider = () => {
   return (
@@ -39,6 +41,16 @@ const AllRoutesProvider = () => {
         <Fragment>
             <CallUs />
             <Footer />
+        </Fragment>
+      } />
+      <Route path="/التسجيل" element={
+        <Fragment>
+            <SignInForm />
+        </Fragment>
+      } />
+      <Route path="/إنشاء_حساب" element={
+        <Fragment>
+            <RegisterForm />
         </Fragment>
       } />
     </Routes>

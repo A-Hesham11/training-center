@@ -66,12 +66,12 @@ const HomePage = () => {
         <LandingHome />
       </div>
 
-      <div className="my-12">
+      <div className="my-20">
         <Introduction />
       </div>
 
-      <div className="container">
-        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
+      <div className="container my-24">
+        <h2 className="text-mainBlack mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
           دورات مميزة
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
