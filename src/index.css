@@ -11,7 +11,7 @@
   text-align: right;
 } */
 
-*, 
+*,
 *::before,
 *::after {
   margin: 0;
@@ -21,7 +21,7 @@
 
 body {
   direction: rtl;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .container {
@@ -29,12 +29,19 @@ body {
   margin: auto;
 }
 
+.list_style {
+  list-style: circle;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
 .title_animation {
   margin: 50px 0px;
   white-space: nowrap;
   overflow: hidden;
-  animation: text 4.2s both steps(23) , border 0.5s;
+  animation: text 4.2s both steps(23), border 0.5s;
 }
 
 @keyframes text {
@@ -46,7 +53,7 @@ body {
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .navbar {
     position: fixed;
     bottom: 0;
@@ -58,7 +65,7 @@ body {
     background-color: white;
   }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .title_animation {
     margin: 50px auto;
   }
@@ -67,12 +74,11 @@ body {
     transform: translate(-50%, -50%) !important;
   }
 }
-@media(max-width: 504px) {
+@media (max-width: 504px) {
   .title_animation {
     font-size: 30px !important;
   }
 }
-
 
 .btn {
   padding: 15px 25px;
@@ -84,13 +90,13 @@ body {
   position: relative;
   font-weight: 1000;
   font-size: 17px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   transition: all 250ms;
   overflow: hidden;
- }
- 
- .btn::before {
+}
+
+.btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -100,25 +106,25 @@ body {
   border-radius: 0.5rem;
   background-color: #212121;
   z-index: -1;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  transition: all 250ms
- }
- 
- .btn:hover {
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.btn:hover {
   color: #e8e8e8;
- }
- 
- .btn:hover::before {
+}
+
+.btn:hover::before {
   width: 100%;
- }
- .footer_list {
+}
+.footer_list {
   font-weight: 400;
   font-size: 16px;
   color: #e1e1e1;
 }
- .footer_list,
- .nav_list {
+.footer_list,
+.nav_list {
   cursor: pointer;
   position: relative;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -164,18 +170,21 @@ body {
 }
 .nav_list:after {
   background-color: #030304;
-
 }
 
 .footer_list:after {
   background-color: #fff;
 }
 
+<<<<<<< HEAD
+.label-float {
+=======
 .login_list:after {
   background-color: #dc715d;
 }
 
 .label-float{
+>>>>>>> fa58e81092a53363b720f2ccaa037a4084eb4a0b
   position: relative;
   padding-top: 13px;
 }
@@ -188,38 +197,38 @@ body {
   min-width: 250px;
   padding: 15px 20px;
   font-size: 16px;
-  transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
-  -webkit-appearance:none;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-appearance: none;
 }
 
 .label-float input:focus,
 .label-float textarea:focus {
-  border: 2px solid #FF9F67;
+  border: 2px solid #ff9f67;
 }
 
 .label-float input::placeholder,
 .label-float textarea::placeholder {
-  color:transparent;
+  color: transparent;
 }
 
-.label-float label{
+.label-float label {
   pointer-events: none;
   position: absolute;
   top: calc(50% - 10px);
   right: 15px;
-  transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
   background-color: white;
   padding: 5px;
   box-sizing: border-box;
 }
 
 .label-float input:required:invalid + label:before,
-.label-float textarea:required:invalid + label:before{
-  content: '*';
+.label-float textarea:required:invalid + label:before {
+  content: "*";
 }
 .label-float input:focus + label,
 .label-float input:not(:placeholder-shown) + label,
@@ -227,5 +236,5 @@ body {
 .label-float textarea:not(:placeholder-shown) + label {
   font-size: 14px;
   top: 0;
-  color: #FF9F67;
+  color: #ff9f67;
 }

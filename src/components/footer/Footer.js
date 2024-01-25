@@ -6,6 +6,7 @@ import { FaSnapchatGhost } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoTiktok } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -72,19 +73,19 @@ const Footer = () => {
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link href="/" className="footer_list">
                     دورات فى المجال الصحى
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link to="/" className="footer_list">
                     دورات فى مجال الاعلام
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link href="/" className="footer_list">
                     دورات فى المجالات العامه
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -94,24 +95,24 @@ const Footer = () => {
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link to="/الشروط" className="footer_list">
                     الشروط والأحكام
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link to="/السياسات" className="footer_list">
                     السياسات العامة
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link href="/الدعم_الفني" className="footer_list">
                     سياسة الدعم الفنى
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="footer_list">
+                  <Link href="#" className="footer_list">
                     الشكاوى والأقتراحات
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
