@@ -19,125 +19,85 @@ const AboutUs = () => {
 
       <div className="container my-20">
         <div data-aos="fade-up">
-          <h2 className="font-semibold text-2xl my-2">من نحن؟</h2>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange" />
-            <p className="text-xl">مركز مهارات متقدمة للتدريب</p>
-          </div>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange" />
-            <p className="text-xl">
+          <h2 className="font-semibold text-xl my-2 text-mainBlack">من نحن؟</h2>
+          <ul className="list_style text-mainBlack text-lg">
+            <li>مركز مهارات متقدمة للتدريب</li>
+            <li>
               مركز تدريب معتمد ومرخص من المؤسسة العامة للتدريب التقني والمهني.
-            </p>
-          </div>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={36} className="fill-mainOrange" />
-            <p className="text-xl">
+            </li>
+            <li>
               نؤمن بأهمية التدريب وتحقيقه للتغيير الإيجابي لذلك نعمل على تقديم
               الدورات التدريبية التطويرية المتكاملة لعملائنا التي تساهم في تطوير
               الكوادر البشرية لتكون مؤهله لبيئة العمل.
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
-          <h2 className="font-semibold text-2xl my-2">الرؤية:</h2>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={36} className="fill-mainOrange" />
-            <p className="text-xl">
+          <h2 className="font-semibold text-xl my-2 text-mainBlack">الرؤية:</h2>
+          <ul className="list_style text-mainGray text-lg">
+            <li>
               أن يكون مركز متميز ومتطور محليا وإقليميا في مجال التدريب، ويساهم
               في بناء وتطوير قدرات الموظفين في تقديم جميع الحلول التدريبية بما
               يتلاءم مع ما يتطلبه سوق العمل ويحقق أهدافه.
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
-          <h2 className="font-semibold text-2xl my-2">الرسالة:</h2>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={46} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+          <h2 className="font-semibold text-xl my-2 text-mainBlack">
+            الرسالة:
+          </h2>
+          <ul className="list_style text-lg text-mainGray">
+            <li className="text-lg">
               توفير برامج واستشارات تدريبية متميزة وفقا للمقاييس العالمية للجودة
               لإعداد وتأهيل الكوادر البشرية في العديد من المجالات بالإضافة إلى
               تحسين جودة الأداء في القطاعين الخاص والعام بالتدريب والتطوير بهدف
               الوصول الى اداء أفضل يساعد على تحقيق اهداف المجتمع.
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
-          <h2 className="font-semibold text-2xl my-2">اهدافنا:</h2>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+          <h2 className="font-semibold text-xl my-2 text-mainBlack">
+            اهدافنا:
+          </h2>
+          <ul className="list_style text-lg text-mainGray">
+            <li>
               يهدف المركز إلى تقديم خدمات تدريبية مميزة للمؤسسات والافراد بكفاءة
               وفاعلية واحترافية عالية على النحو التالي: –
-            </p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               إعداد الخطط التدريبية على أسس علمية مدروسة تلبي احتياجات المجتمع
               والمؤسسات العامة بالدولة.
-            </p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               اعداد برامج تدريبية وفق الاحتياجات المطلوبة لتنمية المهارات
               والقدرات لأفراد القطاعين: العام والخاص وتلبي حاجة السوق والمجتمع.
-            </p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               تقديم المقترحات التدريبية والاستشارية للجهات ذات العلاقة وفق
               الأنظمة المعمول بها.
-            </p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               التطوير الدائم والمستمر للبرامج التدريبية في ضوء الاحتياجات، وآراء
               الفئات المستهدفة.
-            </p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               تعزيز مفهوم الشراكة والتعاون مع المؤسسات التدريبية المحلية
               والدولية وفق التشريعات المنظمة.
-            </p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               السعي وراء الحصول على الاعتماد الدولي لبرامج الدورات التدريبية
               المنفذة داخل المركز.
-            </p>
-          </div>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">
+            </li>
+            <li>
               رفع كفاءة الأداء للمدربين والعاملين بالمركز بما يعزز الوضع
               التنافسي للمركز.
-            </p>
-          </div>
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">توفير بيئة تدريبية متميزة .</p>
-          </div>
-
-          <div className="flex gap-2 my-1">
-            <IoMdCheckmark size={26} className="fill-mainOrange h-7" />
-            <p className="text-xl">نشر ثقافة التطوير والتعلم الذاتي.</p>
-          </div>
+            </li>
+            <li>توفير بيئة تدريبية متميزة .</li>
+            <li>نشر ثقافة التطوير والتعلم الذاتي.</li>
+          </ul>
         </div>
       </div>
 

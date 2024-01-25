@@ -7,6 +7,10 @@ import Courses from "../../pages/Courses";
 import Trainers from "../../pages/Trainers";
 import AboutUs from "../../pages/AboutUs";
 import CallUs from "../../pages/CallUs";
+import TermsAndConditions from "../../pages/TermsAndConditions";
+import PublicPolicies from "../../pages/PublicPolicies";
+import TechnicalSupport from "../../pages/TechnicalSupport";
+import ComplaintsSuggestions from "../../pages/ComplaintsSuggestions";
 
 const AllRoutesProvider = () => {
   return (
@@ -38,6 +42,30 @@ const AllRoutesProvider = () => {
       <Route path="/إتصل_بنا" element={
         <Fragment>
             <CallUs />
+            <Footer />
+        </Fragment>
+      } />
+      <Route path="/الشروط" element={
+        <Fragment>
+            <TermsAndConditions />
+            <Footer />
+        </Fragment>
+      } />
+      <Route path="/السياسات" element={
+        <Fragment>
+            <PublicPolicies />
+            <Footer />
+        </Fragment>
+      } />
+      <Route path="/الدعم_الفني" element={
+        <Fragment>
+            <TechnicalSupport />
+            <Footer />
+        </Fragment>
+      } />
+      <Route path="/الشكاوي" element={
+        <Fragment>
+            <ComplaintsSuggestions />
             <Footer />
         </Fragment>
       } />
