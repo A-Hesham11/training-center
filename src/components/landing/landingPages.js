@@ -28,11 +28,11 @@ const LandingPages = ({ landingImage, title, main, branch }) => {
         <NavBar />
       </div>
       <div className="container">
-        <div className="landing_content absolute w-min top-1/2 -translate-y-1/2 text-center md:text-right">
-          <h2 className="title_animation font-bold text-4xl text-white mb-4">
+        <div className="landing_content absolute w-max top-1/2 -translate-y-1/2 text-center md:text-right">
+          <h2 className="font-bold text-4xl text-white mb-4">
             {title}
           </h2>
-          <ul className="flex items-center gap-2 text-white">
+          <ul className="flex gap-2 text-white justify-center md:justify-start">
             <li className="text-white font-bold cursor-pointer"><Link to="/">{main}</Link></li>
             <li>|</li>
             <li className="text-white rounded-xl font-bold cursor-pointer">{branch}</li>

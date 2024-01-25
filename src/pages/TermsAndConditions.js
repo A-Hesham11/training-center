@@ -1,13 +1,3 @@
-// import React from 'react'
-
-// const TermsAndConditions = () => {
-//   return (
-//     <div>TermsAndConditions</div>
-//   )
-// }
-
-// export default TermsAndConditions
-
 import React from "react";
 import ConditionsImg from "../assets/landingHome.png";
 import LandingPages from "../components/landing/landingPages";

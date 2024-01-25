@@ -48,7 +48,7 @@ const CallUs = () => {
         >
           تواصل معنا
         </h2>
-        <div className="grid grid-cols-12 gap-12">
+        <div className="grid grid-cols-12 gap-0 md:gap-8">
           <form onSubmit={handleSubmit} className="col-span-12 md:col-span-full lg:col-span-7" data-aos="zoom-in-left">
             <div className="row">
               <div className="col-12 mb-6">
@@ -75,7 +75,7 @@ const CallUs = () => {
                         id="name"
                         placeholder=" "
                         type="text"
-                        name="uname"
+                        name="name"
                         value={formData.uname}
                         onChange={handleChange}
                       />
@@ -98,19 +98,7 @@ const CallUs = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 my-6">
-                <div className="form-group label-float">
-                  <input
-                    className="form-control w-full rounded-lg p-3 border"
-                    placeholder=" "
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                  />
-                  <label>الموضوع</label>
-                </div>
-              </div>
+
             </div>
             <div className="mt-4">
               <button
@@ -121,7 +109,7 @@ const CallUs = () => {
               </button>
             </div>
           </form>
-          <div className="col-span-12 lg:col-span-5 pt-3" data-aos="zoom-in-right">
+          <div className="col-span-12 lg:col-span-5 pt-8 md:pt-3" data-aos="zoom-in-right">
             <div className="flex items-center gap-2">
               <FaMobileScreenButton size={28}/>
               <p className="font-semibold text-xl">0534699908</p>

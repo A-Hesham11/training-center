@@ -14,18 +14,28 @@ import AOS from "aos";
 
 const NavBar = () => {
   const [navToggle, setNavToggle] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [visible, setVisible] = useState(true);
   const [isFirstPage, setIsFirstPage] = useState(true);
   const location = useLocation();
-  console.log("🚀 ~ NavBar ~ location:", location.pathname)
+
+
+useEffect(() => {
+  AOS.init({ duration: 800, once: true });
+}, [navToggle])
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
-  }, [navToggle]);
 
-  useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 100;
+      const currentPosition = window.scrollY;
+
+      const scrolled = currentPosition > 120;
       setIsFirstPage(!scrolled);
+
+      setVisible(currentPosition < scrollPosition);
+
+      setScrollPosition(currentPosition <= 0 ? 0 : currentPosition);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,7 +43,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrollPosition]);
 
   const navLinks = [
     { path: "/", label: "الرئيسية" },
@@ -45,15 +55,21 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`relative ${isFirstPage ? "" : "bg-white shadow-xl"} z-50 py-2`}
+    className={`relative z-50 py-2 ${
+      visible ? `${isFirstPage ? "" : "bg-white shadow"}` : "hidden"
+    }`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
             {isFirstPage ? (
-              <img src={Logo} alt="logo" />
+              <a href="/">
+                <img src={Logo} alt="logo" width={150} />
+              </a>
             ) : (
-              <img src={LogoFooter} alt="logo" width={100} />
+              <a href="/">
+                <img src={LogoFooter} alt="logo" width={100} />
+              </a>
             )}
           </div>
           <ul
@@ -65,11 +81,20 @@ const NavBar = () => {
             {navLinks.map((link) => (
               <li key={link.path} className="text-center nav_list">
                 {link.path === "/" ? (
-                  <IoHomeOutline size="28" className="w-full static lg:hidden" />
+                  <IoHomeOutline
+                    size="28"
+                    className="w-full static lg:hidden"
+                  />
                 ) : link.path === "/الدورات" ? (
-                  <MdCastForEducation size="28" className="w-full static lg:hidden" />
+                  <MdCastForEducation
+                    size="28"
+                    className="w-full static lg:hidden"
+                  />
                 ) : link.path === "/المدربين" ? (
-                  <LiaChalkboardTeacherSolid size="28" className="w-full static lg:hidden" />
+                  <LiaChalkboardTeacherSolid
+                    size="28"
+                    className="w-full static lg:hidden"
+                  />
                 ) : link.path === "/من_نحن" ? (
                   <FaUsersLine size="28" className="w-full static lg:hidden" />
                 ) : link.path === "/إتصل_بنا" ? (
@@ -78,7 +103,9 @@ const NavBar = () => {
                 <Link
                   to={link.path}
                   className={`font-semibold text-lg ${
-                    location.pathname == link.path ? "border-b-2 border-mainBlack" : ""
+                    location.pathname == link.path
+                      ? "border-b-2 border-mainBlack"
+                      : ""
                   }`}
                 >
                   {link.label}
@@ -86,7 +113,10 @@ const NavBar = () => {
               </li>
             ))}
             <li className="col-span-1 lg:col-span-2 text-center w-max m-auto nav_list">
-              <Link to="/التسجيل" className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row">
+              <Link
+                to="/التسجيل"
+                className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row"
+              >
                 <FaRegUserCircle className="w-full size-7 mb-1 lg:size-5 lg:mb-0" />
                 <span>تسجيل / دخول</span>
               </Link>
