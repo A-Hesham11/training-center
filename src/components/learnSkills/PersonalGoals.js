@@ -6,10 +6,10 @@ const PersonalGoals = () => {
     <div className="bg-[#cccccc2e] py-28">
       <div className="container">
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
-          <div data-aos="zoom-in-left">
+          <div data-aos="zoom-in">
             <img src={PersonalGoalsImg} alt="Personal Goals" />
           </div>
-          <div data-aos="zoom-in-right">
+          <div data-aos="zoom-in">
             <h2 className="text-3xl font-semibold">
               اتخذ الخطوة التالية نحو أهدافك الشخصية والمهنية معنا.
             </h2>

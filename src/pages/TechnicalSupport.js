@@ -183,7 +183,7 @@ const TechnicalSupport = () => {
           <form
             onSubmit={handleSubmit}
             className="col-span-12 md:col-span-full lg:col-span-7"
-            data-aos="zoom-in-left"
+            data-aos="zoom-in"
           >
             <div className="row">
               <div className="col-12 mb-6">
@@ -266,7 +266,7 @@ const TechnicalSupport = () => {
           </form>
           <div
             className="col-span-12 lg:col-span-5 pt-8 md:pt-3"
-            data-aos="zoom-in-right"
+            data-aos="zoom-in"
           >
             <div className="flex items-center gap-2">
               <FaMobileScreenButton size={28} />

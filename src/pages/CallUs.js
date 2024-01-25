@@ -49,7 +49,7 @@ const CallUs = () => {
           تواصل معنا
         </h2>
         <div className="grid grid-cols-12 gap-0 md:gap-8">
-          <form onSubmit={handleSubmit} className="col-span-12 md:col-span-full lg:col-span-7" data-aos="zoom-in-left">
+          <form onSubmit={handleSubmit} className="col-span-12 md:col-span-full lg:col-span-7" data-aos="zoom-in">
             <div className="row">
               <div className="col-12 mb-6">
                 <div className="form-group label-float">
@@ -109,7 +109,7 @@ const CallUs = () => {
               </button>
             </div>
           </form>
-          <div className="col-span-12 lg:col-span-5 pt-8 md:pt-3" data-aos="zoom-in-right">
+          <div className="col-span-12 lg:col-span-5 pt-8 md:pt-3" data-aos="zoom-in">
             <div className="flex items-center gap-2">
               <FaMobileScreenButton size={28}/>
               <p className="font-semibold text-xl">0534699908</p>
