@@ -439,57 +439,65 @@ const PublicPolicies = () => {
           <p className="font-semibold text-xl my-3 text-mainBlack">
             الكادر الإشرافي وأدواره:
           </p>
-          <table class="border-collapse border border-slate-500 rounded-2xl">
-            <thead className="rounded-2xl">
-              <tr className="text-sm font-normal">
-                <th class="border border-gray-400 p-2">م</th>
-                <th class="border border-gray-400 p-2">اسم الموظف</th>
-                <th class="border border-gray-400 p-2">وظيفته</th>
-                <th class="border border-gray-400 p-2">
-                  دور ومسئوليات عضو الكادر الإشرافي للموقع
-                </th>
-                <th class="border border-gray-400 p-2">وسائل التواصل</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="text-center">
-                <td class="border border-gray-400 p-2">1</td>
-                <td class="border border-gray-400 p-2">أ. آلاء يحيى</td>
-                <td class="border border-gray-400 p-2">مدير عام</td>
-                <td class="border border-gray-400 p-2">
-                  مدير عام الإشراف العام ووضع السياسات التدريبية والاشراف على
-                  عمليات تحديد الاحتياجات التدريبية للأفراد المستهدفة وتحليلها
-                  والتأكد من أن الحقائب التدريبية مبنية وفقها وتلبي هذه
-                  الاحتياجات الفعلية
-                </td>
-                <td class="border border-gray-400 p-2">Alaajali33@gmail.com</td>
-              </tr>
-              <tr className="text-center">
-                <td class="border border-gray-400 p-2">2</td>
-                <td class="border border-gray-400 p-2">أ. طيف المالكي</td>
-                <td class="border border-gray-400 p-2">مسؤول الدعم الفني</td>
-                <td class="border border-gray-400 p-2">
-                  متابعة وحل مشاكل المستفيدين/التنسيق مع المدربين والمتدربين.
-                  والتواصل مع جميع الأطراف وتقديم الدعم المناسب
-                </td>
-                <td class="border border-gray-400 p-2">
-                  Advance.skills3@gmail.com
-                </td>
-              </tr>
-              <tr className="text-center">
-                <td class="border border-gray-400 p-2">3</td>
-                <td class="border border-gray-400 p-2">أ. جواهر التركي</td>
-                <td class="border border-gray-400 p-2">خدمة العملاء</td>
-                <td class="border border-gray-400 p-2">
-                  عمل تقارير قياس الاثر التدريبي وتقارير قياس رضى المدرب
-                  والمتدرب بالنتائج الكلية وتقديم التوصيات
-                </td>
-                <td class="border border-gray-400 p-2">
-                  Advance.skills3@gmail.com
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="border-collapse border border-slate-500 rounded-2xl">
+              <thead className="rounded-2xl">
+                <tr className="text-sm font-normal">
+                  <th className="border border-gray-400 p-2">م</th>
+                  <th className="border border-gray-400 p-2">اسم الموظف</th>
+                  <th className="border border-gray-400 p-2">وظيفته</th>
+                  <th className="border border-gray-400 p-2">
+                    دور ومسئوليات عضو الكادر الإشرافي للموقع
+                  </th>
+                  <th className="border border-gray-400 p-2">وسائل التواصل</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">1</td>
+                  <td className="border border-gray-400 p-2">أ. آلاء يحيى</td>
+                  <td className="border border-gray-400 p-2">مدير عام</td>
+                  <td className="border border-gray-400 p-2">
+                    مدير عام الإشراف العام ووضع السياسات التدريبية والاشراف على
+                    عمليات تحديد الاحتياجات التدريبية للأفراد المستهدفة وتحليلها
+                    والتأكد من أن الحقائب التدريبية مبنية وفقها وتلبي هذه
+                    الاحتياجات الفعلية
+                  </td>
+                  <td className="border border-gray-400 p-2">
+                    Alaajali33@gmail.com
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">2</td>
+                  <td className="border border-gray-400 p-2">أ. طيف المالكي</td>
+                  <td className="border border-gray-400 p-2">
+                    مسؤول الدعم الفني
+                  </td>
+                  <td className="border border-gray-400 p-2">
+                    متابعة وحل مشاكل المستفيدين/التنسيق مع المدربين والمتدربين.
+                    والتواصل مع جميع الأطراف وتقديم الدعم المناسب
+                  </td>
+                  <td className="border border-gray-400 p-2">
+                    Advance.skills3@gmail.com
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">3</td>
+                  <td className="border border-gray-400 p-2">
+                    أ. جواهر التركي
+                  </td>
+                  <td className="border border-gray-400 p-2">خدمة العملاء</td>
+                  <td className="border border-gray-400 p-2">
+                    عمل تقارير قياس الاثر التدريبي وتقارير قياس رضى المدرب
+                    والمتدرب بالنتائج الكلية وتقديم التوصيات
+                  </td>
+                  <td className="border border-gray-400 p-2">
+                    Advance.skills3@gmail.com
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
@@ -502,116 +510,118 @@ const PublicPolicies = () => {
             الوطني للتعليم الإلكتروني المهنية الاحترافية بناء على الجدول الزمنى
             الموضح أدناه:
           </p>
-          <table class="border-collapse border border-slate-500 rounded-2xl">
-            <thead className="rounded-2xl">
-              <tr className="text-sm font-normal">
-                <th class="border border-gray-400 p-2">
-                  نسبة الحد الأدنى لعدد المستهدفين بالحصول على الشهادات المهنية
-                  الاحترافية
-                </th>
-                <th class="border border-gray-400 p-2">
-                  نوع الشهادات المهنية الاحترافية
-                </th>
-                <th class="border border-gray-400 p-2">
-                  الفئة المستهدفة بالحصول على الشهادات المهنية الاحترافية
-                </th>
-                <th class="border border-gray-400 p-2">
-                  بداية الالتزام بالخطة
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">25%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تقديم التعليم والتدريب الإلكتروني OTT
-                </td>
-                <td class="border-x border-x-gray-400 p-2"></td>
-                <td class="p-2"></td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">25%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تصميم خبرات التعليم الإلكتروني eLXD
-                </td>
-                <td class="border border-x-gray-400 border-y-transparent p-2">
-                  المدربين ومن في حكمهم (يشمل فريق التصميم التعليمي ومطوري
-                  المحتوى الإلكتروني سواء داخل الجهة أو خارجها)
-                </td>
-                <td class="border border-x-gray-400 border-y-transparent p-2">
-                  2023
-                </td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">0%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تطوير المحتوى الإلكتروني eLCD
-                </td>
-                <td class="border border-gray-400 p-2"></td>
-                <td class="border border-gray-400 p-2"></td>
-              </tr>
+          <div className="overflow-x-auto">
+            <table className="border-collapse border border-slate-500 rounded-2xl">
+              <thead className="rounded-2xl">
+                <tr className="text-sm font-normal">
+                  <th className="border border-gray-400 p-2">
+                    نسبة الحد الأدنى لعدد المستهدفين بالحصول على الشهادات
+                    المهنية الاحترافية
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    نوع الشهادات المهنية الاحترافية
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    الفئة المستهدفة بالحصول على الشهادات المهنية الاحترافية
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    بداية الالتزام بالخطة
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">25%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تقديم التعليم والتدريب الإلكتروني OTT
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2"></td>
+                  <td className="p-2"></td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">25%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تصميم خبرات التعليم الإلكتروني eLXD
+                  </td>
+                  <td className="border border-x-gray-400 border-y-transparent p-2">
+                    المدربين ومن في حكمهم (يشمل فريق التصميم التعليمي ومطوري
+                    المحتوى الإلكتروني سواء داخل الجهة أو خارجها)
+                  </td>
+                  <td className="border border-x-gray-400 border-y-transparent p-2">
+                    2023
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">0%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تطوير المحتوى الإلكتروني eLCD
+                  </td>
+                  <td className="border border-gray-400 p-2"></td>
+                  <td className="border border-gray-400 p-2"></td>
+                </tr>
 
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">35%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تقديم التعليم والتدريب الإلكتروني OTT
-                </td>
-                <td class="border-x border-x-gray-400 p-2"></td>
-                <td class="p-2"></td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">50%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تصميم خبرات التعليم الإلكتروني eLXD
-                </td>
-                <td class="border border-x-gray-400 border-y-transparent p-2">
-                  المدربين ومن في حكمهم (يشمل فريق التصميم التعليمي ومطوري
-                  المحتوى الإلكتروني سواء داخل الجهة أو خارجها)
-                </td>
-                <td class="border border-x-gray-400 border-y-transparent p-2">
-                  2024
-                </td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">25%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تطوير المحتوى الإلكتروني eLCD
-                </td>
-                <td class="border border-gray-400 p-2"></td>
-                <td class="border border-gray-400 p-2"></td>
-              </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">35%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تقديم التعليم والتدريب الإلكتروني OTT
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2"></td>
+                  <td className="p-2"></td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">50%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تصميم خبرات التعليم الإلكتروني eLXD
+                  </td>
+                  <td className="border border-x-gray-400 border-y-transparent p-2">
+                    المدربين ومن في حكمهم (يشمل فريق التصميم التعليمي ومطوري
+                    المحتوى الإلكتروني سواء داخل الجهة أو خارجها)
+                  </td>
+                  <td className="border border-x-gray-400 border-y-transparent p-2">
+                    2024
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">25%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تطوير المحتوى الإلكتروني eLCD
+                  </td>
+                  <td className="border border-gray-400 p-2"></td>
+                  <td className="border border-gray-400 p-2"></td>
+                </tr>
 
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">50%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تقديم التعليم والتدريب الإلكتروني OTT
-                </td>
-                <td class="border-x border-x-gray-400 p-2"></td>
-                <td class="p-2"></td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">75%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تصميم خبرات التعليم الإلكتروني eLXD
-                </td>
-                <td class="border border-x-gray-400 border-y-transparent p-2">
-                  المدربين ومن في حكمهم (يشمل فريق التصميم التعليمي ومطوري
-                  المحتوى الإلكتروني سواء داخل الجهة أو خارجها)
-                </td>
-                <td class="border border-x-gray-400 border-y-transparent p-2">
-                  2025
-                </td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">50%</td>
-                <td className="border-b border-gray-400 p-2">
-                  تطوير المحتوى الإلكتروني eLCD
-                </td>
-                <td class="border border-gray-400 p-2"></td>
-                <td class="border border-gray-400 p-2"></td>
-              </tr>
-            </tbody>
-          </table>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">50%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تقديم التعليم والتدريب الإلكتروني OTT
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2"></td>
+                  <td className="p-2"></td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">75%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تصميم خبرات التعليم الإلكتروني eLXD
+                  </td>
+                  <td className="border border-x-gray-400 border-y-transparent p-2">
+                    المدربين ومن في حكمهم (يشمل فريق التصميم التعليمي ومطوري
+                    المحتوى الإلكتروني سواء داخل الجهة أو خارجها)
+                  </td>
+                  <td className="border border-x-gray-400 border-y-transparent p-2">
+                    2025
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">50%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    تطوير المحتوى الإلكتروني eLCD
+                  </td>
+                  <td className="border border-gray-400 p-2"></td>
+                  <td className="border border-gray-400 p-2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
@@ -636,83 +646,85 @@ const PublicPolicies = () => {
             على شهادات المركز الوطني للتعليم الإلكتروني المهنية الاحترافية بناء
             على الجدول الزمنى الموضح أدناه:
           </p>
-          <table class="border-collapse border border-slate-500 rounded-2xl">
-            <thead className="rounded-2xl">
-              <tr className="text-sm font-normal">
-                <th class="border border-gray-400 p-2">
-                  نسبة الحد الأدنى لعدد المستهدفين بالحصول على الشهادات المهنية
-                  الاحترافية
-                </th>
-                <th class="border border-gray-400 p-2">
-                  نوع الشهادات المهنية الاحترافية
-                </th>
-                <th class="border border-gray-400 p-2">
-                  الفئة المستهدفة بالحصول على الشهادات المهنية الاحترافية
-                </th>
-                <th class="border border-gray-400 p-2">
-                  بداية الالتزام بالخطة
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">25%</td>
-                <td className="border-b border-gray-400 p-2">
-                  ضبط جودة التعليم الإلكتروني eLQA
-                </td>
-                <td class="border-x border-x-gray-400 p-2">
-                  الكادر الإشرافي على البيئة التدريبية
-                </td>
-                <td class="p-2">2023</td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">0%</td>
-                <td className="border-b border-gray-400 p-2">
-                  قيادة التعليم الإلكتروني eLL
-                </td>
-                <td class="border-x border-x-gray-400 p-2"></td>
-                <td class="p-2"></td>
-              </tr>
+          <div className="overflow-x-auto">
+            <table className="border-collapse border border-slate-500 rounded-2xl">
+              <thead className="rounded-2xl">
+                <tr className="text-sm font-normal">
+                  <th className="border border-gray-400 p-2">
+                    نسبة الحد الأدنى لعدد المستهدفين بالحصول على الشهادات
+                    المهنية الاحترافية
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    نوع الشهادات المهنية الاحترافية
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    الفئة المستهدفة بالحصول على الشهادات المهنية الاحترافية
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    بداية الالتزام بالخطة
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">25%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    ضبط جودة التعليم الإلكتروني eLQA
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2">
+                    الكادر الإشرافي على البيئة التدريبية
+                  </td>
+                  <td className="p-2">2023</td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">0%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    قيادة التعليم الإلكتروني eLL
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2"></td>
+                  <td className="p-2"></td>
+                </tr>
 
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">50%</td>
-                <td className="border-b border-gray-400 p-2">
-                  ضبط جودة التعليم الإلكتروني eLQA
-                </td>
-                <td class="border-x border-x-gray-400 p-2">
-                  الكادر الإشرافي على البيئة التدريبية
-                </td>
-                <td class="p-2">2024</td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">25%</td>
-                <td className="border-b border-gray-400 p-2">
-                  قيادة التعليم الإلكتروني eLL
-                </td>
-                <td class="border-x border-x-gray-400 p-2"></td>
-                <td class="p-2"></td>
-              </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">50%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    ضبط جودة التعليم الإلكتروني eLQA
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2">
+                    الكادر الإشرافي على البيئة التدريبية
+                  </td>
+                  <td className="p-2">2024</td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">25%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    قيادة التعليم الإلكتروني eLL
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2"></td>
+                  <td className="p-2"></td>
+                </tr>
 
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">75%</td>
-                <td className="border-b border-gray-400 p-2">
-                  ضبط جودة التعليم الإلكتروني eLQA
-                </td>
-                <td class="border-x border-x-gray-400 p-2">
-                  الكادر الإشرافي على البيئة التدريبية
-                </td>
-                <td class="p-2">2025</td>
-              </tr>
-              <tr className="text-center">
-                <td className="border border-gray-400 p-2">75%</td>
-                <td className="border-b border-gray-400 p-2">
-                  قيادة التعليم الإلكتروني eLL
-                </td>
-                <td class="border-x border-x-gray-400 p-2"></td>
-                <td class="p-2"></td>
-              </tr>
-            </tbody>
-          </table>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">75%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    ضبط جودة التعليم الإلكتروني eLQA
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2">
+                    الكادر الإشرافي على البيئة التدريبية
+                  </td>
+                  <td className="p-2">2025</td>
+                </tr>
+                <tr className="text-center">
+                  <td className="border border-gray-400 p-2">75%</td>
+                  <td className="border-b border-gray-400 p-2">
+                    قيادة التعليم الإلكتروني eLL
+                  </td>
+                  <td className="border-x border-x-gray-400 p-2"></td>
+                  <td className="p-2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
@@ -869,7 +881,9 @@ const PublicPolicies = () => {
               التعليمي.
             </li>
 
-            <p className="font-semibold text-xl my-2 text-mainBlack">مهارات التدريس</p>
+            <p className="font-semibold text-xl my-2 text-mainBlack">
+              مهارات التدريس
+            </p>
 
             <p className="text-lg text-mainGray">
               المدربين لدينا يحصلون على تدريب لاكتساب مهارات التدريس على المراحل

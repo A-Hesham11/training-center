@@ -9,13 +9,13 @@ const LandingHome = () => {
 
   useEffect(() => {
     // Initialize AOS library after the component is mounted
-    AOS.init({ duration: 1200, once: true });
+    AOS.init({ duration: 1200, once: true,  offset: 150, });
   }, []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowContent(true);
-    }, 3800);
+    }, 2500);
     return () => clearTimeout(timeoutId);
   }, []);
 
@@ -26,7 +26,7 @@ const LandingHome = () => {
         <NavBar />
       </div>
       <div className="container">
-        <div className="landing_content absolute w-min top-1/2 -translate-y-1/2 text-center md:text-right">
+        <div className="landing_content absolute w-[90%] sm:w-min top-1/2 -translate-y-1/2 text-center md:text-right px-3">
           <h2 className="title_animation font-bold text-4xl text-mainBlack mb-4">
             مركز مهارات متقدمة للتدريب
           </h2>

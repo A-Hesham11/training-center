@@ -32,7 +32,7 @@ body {
   margin: 50px 0px;
   white-space: nowrap;
   overflow: hidden;
-  animation: text 4.2s both steps(23), border 0.5s;
+  animation: text 2.5s both steps(23), border 0.5s;
 }
 
 @keyframes text {
@@ -65,9 +65,19 @@ body {
     transform: translate(-50%, -50%) !important;
   }
 }
-@media (max-width: 504px) {
+@media (max-width: 612px) {
   .title_animation {
-    font-size: 30px !important;
+    font-size: 35px !important;
+  }
+}
+@media (max-width: 506px) {
+  .title_animation {
+    font-size: 28px !important;
+  }
+}
+@media (max-width: 428px) {
+  .title_animation {
+    font-size: 22px !important;
   }
 }
 
@@ -224,4 +234,8 @@ body {
   font-size: 14px;
   top: 0;
   color: #ff9f67;
+}
+
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
 }

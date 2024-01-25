@@ -30,12 +30,12 @@ const ButtonGoUp = () => {
 
   return (
     <button
-      className={`bg-mainOrange text-white rounded-full p-4 fixed bottom-6 right-6 ${
+      className={`bg-mainOrange text-white rounded-full p-4 fixed bottom-6 right-6 shadow ${
         showButton ? "opacity-100" : "opacity-0"
       }`}
       onClick={scrollToTop}
     >
-      <FaArrowTurnUp size={32} />
+      <FaArrowTurnUp size={26} />
     </button>
   );
 };
