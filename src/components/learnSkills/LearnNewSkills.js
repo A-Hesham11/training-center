@@ -75,8 +75,8 @@ const LearnNewSkills = () => {
             <button onClick={openModal} className="relative bg-white">
               <img src={VideoImg} alt="Video" />
               <FaPlayCircle
-                size={100}
-                className="play-icon absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 fill-mainOrange"
+                size={95}
+                className="play-icon absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 fill-mainOrange bg-white rounded-full"
               />
             </button>
             <Modal

@@ -22,7 +22,6 @@ const LandingPages = ({ landingImage, title, main, branch }) => {
   return (
     <header className="relative">
       <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-[#c3baae] opacity-[65%] "></div>
         <img src={landingImage} alt="Courses" className="h-[500px] w-screen" />
       </div>
       <div className="fixed top-0 w-full z-50">
