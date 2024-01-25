@@ -16,6 +16,7 @@ const NavBar = () => {
   const [navToggle, setNavToggle] = useState(false);
   const [isFirstPage, setIsFirstPage] = useState(true);
   const location = useLocation();
+  console.log("🚀 ~ NavBar ~ location:", location.pathname)
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -77,7 +78,7 @@ const NavBar = () => {
                 <Link
                   to={link.path}
                   className={`font-semibold text-lg ${
-                    location.pathname === link.path ? "border-b-2 border-mainBlack" : ""
+                    location.pathname == link.path ? "border-b-2 border-mainBlack" : ""
                   }`}
                 >
                   {link.label}

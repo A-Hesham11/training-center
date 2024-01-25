@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Cairo', sans-serif;
-  direction: rtl;
-  text-align: right;
-} */
-
 *,
 *::before,
 *::after {
@@ -176,15 +167,11 @@ body {
   background-color: #fff;
 }
 
-<<<<<<< HEAD
-.label-float {
-=======
 .login_list:after {
   background-color: #dc715d;
 }
 
 .label-float{
->>>>>>> fa58e81092a53363b720f2ccaa037a4084eb4a0b
   position: relative;
   padding-top: 13px;
 }
