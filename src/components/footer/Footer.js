@@ -4,11 +4,23 @@ import { FaTwitter } from "react-icons/fa";
 import { BiLogoTelegram } from "react-icons/bi";
 import { FaSnapchatGhost } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
-import { IoLogoTiktok } from "react-icons/io5";
+import { IoLogoTiktok, IoMagnet } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Mada from "../../assets/mada.svg";
+import Visa from "../../assets/visa.svg";
+import Master from "../../assets/master.svg";
+import Applepay from "../../assets/applepay.svg";
+import Googlepay from "../../assets/googlepay.svg";
 
 const Footer = () => {
+  const location = useLocation();
+  const locationPath = location.pathname;
+
+    const locationPathName = locationPath === "/details" ? "/details" : locationPath === "/courseDetails" ? "/courseDetails" : "";
+
+    const pathName = locationPath === locationPathName;
+
   return (
     <footer className="bg-mainBlack">
       <div className="container">
@@ -61,6 +73,27 @@ const Footer = () => {
                     </li>
                   </ul>
                 </li>
+                {pathName && (
+                  <li className="mb-4">
+                    <ul className="flex items-center justify-center md:justify-start gap-4">
+                      <li>
+                        <img src={Mada} alt="Mada" className="w-14 h-8 bg-white border p-2 rounded-md" />
+                      </li>
+                      <li>
+                        <img src={Visa} alt="Visa" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                      </li>
+                      <li>
+                        <img src={Master} alt="Master" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                      </li>
+                      <li>
+                        <img src={Applepay} alt="Applepay" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                      </li>
+                      <li>
+                        <img src={Googlepay} alt="Googlepay" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                      </li>
+                    </ul>
+                  </li>
+                )}
                 <li className="mb-4 text-mainOrange">من الأحد الى الخميس</li>
                 <li className="mb-4 text-mainOrange">
                   من الساعه 9 صباحا - 5 مساء
@@ -95,22 +128,22 @@ const Footer = () => {
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
-                  <a href="/الشروط" className="footer_list">
+                  <a href="/terms_Conditions" className="footer_list">
                     الشروط والأحكام
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/السياسات" className="footer_list">
+                  <a href="/policies" className="footer_list">
                     السياسات العامة
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/الدعم_الفني" className="footer_list">
+                  <a href="/technical_support" className="footer_list">
                     سياسة الدعم الفنى
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/إتصل_بنا" className="footer_list">
+                  <a href="/callUs" className="footer_list">
                     الشكاوى والأقتراحات
                   </a>
                 </li>
@@ -122,22 +155,22 @@ const Footer = () => {
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
-                  <a href="/إتصل_بنا" className="footer_list">
+                  <a href="/callUs" className="footer_list">
                     إتصل بنا
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/من_نحن" className="footer_list">
+                  <a href="/aboutUs" className="footer_list">
                     من نحن
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/المدربين" className="footer_list">
+                  <a href="/trainers" className="footer_list">
                     المدربين
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/الدورات" className="footer_list">
+                  <a href="/courses" className="footer_list">
                     الدورات
                   </a>
                 </li>
@@ -151,7 +184,9 @@ const Footer = () => {
         <span>
           <FaHeart size={20} className="fill-mainOrange" />
         </span>{" "}
-        <p>بواسطة <span>Hisham</span></p>
+        <p>
+          بواسطة <span>Hisham</span>
+        </p>
       </div>
     </footer>
   );

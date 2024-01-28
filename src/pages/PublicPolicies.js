@@ -825,7 +825,7 @@ const PublicPolicies = () => {
               ويسرنا استقبال أي من الشكاوى أو الاستفسارات أو الملاحظات عبر:
             </p>
             <li>نموذج الشكاوى المرفق</li>
-            <Link to="/إتصل_بنا" className="text-lg text-blue-800 underline">
+            <Link to="/callUs" className="text-lg text-blue-800 underline">
               اضغط هنا
             </Link>
             <li> رقم الشكاوى(اتصال و واتس اب) :0534699908</li>

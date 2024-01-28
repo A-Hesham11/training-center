@@ -12,6 +12,8 @@ import TechnicalSupport from "../../pages/TechnicalSupport";
 import ComplaintsSuggestions from "../../pages/ComplaintsSuggestions";
 import SignInForm from "../../pages/SignInForm";
 import RegisterForm from "../../pages/RegisterForm";
+import CoursesDetails from "../../pages/CoursesDetails";
+import CourseDetails from "../../pages/CourseDetails";
 
 const AllRoutesProvider = () => {
   return (
@@ -26,7 +28,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/الدورات"
+        path="/courses"
         element={
           <Fragment>
             <Courses />
@@ -35,7 +37,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/المدربين"
+        path="/trainers"
         element={
           <Fragment>
             <Trainers />
@@ -44,7 +46,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/من_نحن"
+        path="/aboutUs"
         element={
           <Fragment>
             <AboutUs />
@@ -53,7 +55,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/إتصل_بنا"
+        path="/callUs"
         element={
           <Fragment>
             <CallUs />
@@ -62,7 +64,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/الشروط"
+        path="/terms_Conditions"
         element={
           <Fragment>
             <TermsAndConditions />
@@ -71,7 +73,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/السياسات"
+        path="/policies"
         element={
           <Fragment>
             <PublicPolicies />
@@ -80,7 +82,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/الدعم_الفني"
+        path="/technical_support"
         element={
           <Fragment>
             <TechnicalSupport />
@@ -89,7 +91,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/الشكاوي"
+        path="/complaints"
         element={
           <Fragment>
             <ComplaintsSuggestions />
@@ -98,7 +100,7 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/التسجيل"
+        path="/signIn"
         element={
           <Fragment>
             <SignInForm />
@@ -106,10 +108,28 @@ const AllRoutesProvider = () => {
         }
       />
       <Route
-        path="/إنشاء_حساب"
+        path="/register"
         element={
           <Fragment>
             <RegisterForm />
+          </Fragment>
+        }
+      />
+      <Route
+        path="/details"
+        element={
+          <Fragment>
+            <CoursesDetails />
+            <Footer />
+          </Fragment>
+        }
+      />
+      <Route
+        path="/courseDetails"
+        element={
+          <Fragment>
+            <CourseDetails />
+            <Footer />
           </Fragment>
         }
       />

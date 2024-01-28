@@ -136,7 +136,7 @@ const SignInForm = () => {
           <div className="flex gap-1 text-sm mt-6 mb-1 justify-center">
             <p className="text-mainGray">هل لديك حساب؟</p>
             <Link
-              to="/إنشاء_حساب"
+              to="/register"
               className="text-[#dc715d] font-semibold hover:duration-500 nav_list login_list"
             >
               إنشاء حساب
