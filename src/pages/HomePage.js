@@ -19,7 +19,7 @@ const HomePage = () => {
       id: 1,
       image: Nursing,
       alt: "Nursing",
-      title: "دورة التهيئه لاختبار التمريض البرومترك السعودي",
+      title: "دورة التهيئه لاختبار التمريض البرومترك السعودي ",
       price: "",
       titleBtn: "سجل الان ",
     },
@@ -71,7 +71,10 @@ const HomePage = () => {
       </div>
 
       <div className="container my-24">
-        <h2 className="text-mainBlack mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
+        <h2
+          className="text-mainBlack mb-14 font-semibold text-5xl text-center"
+          data-aos="fade-down"
+        >
           دورات مميزة
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
@@ -83,6 +86,7 @@ const HomePage = () => {
               title={course.title}
               price={course.price}
               titleBtn={course.titleBtn}
+              link="/details"
             />
           ))}
         </div>
@@ -93,7 +97,10 @@ const HomePage = () => {
       </div>
 
       <div className="container">
-        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
+        <h2
+          className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center"
+          data-aos="fade-down"
+        >
           أفضل المدربين
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
@@ -113,7 +120,7 @@ const HomePage = () => {
         <PersonalGoals />
       </div>
 
-      <ButtonGoUp  />
+      <ButtonGoUp />
     </main>
   );
 };

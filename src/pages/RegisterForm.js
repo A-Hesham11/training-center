@@ -155,7 +155,7 @@ const RegisterForm = () => {
           <div className="flex gap-1 text-sm mt-6 mb-1 justify-center">
             <p className="text-mainGray">ليس لديك حساب؟</p>
             <Link
-              to="/التسجيل"
+              to="/signIn"
               className="text-[#dc715d] font-semibold hover:duration-500 nav_list login_list"
             >
               تسجيل الدخول

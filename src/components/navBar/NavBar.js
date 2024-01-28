@@ -8,7 +8,6 @@ import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 import { FaUsersLine } from "react-icons/fa6";
 import { BiPhoneCall } from "react-icons/bi";
 import Logo from "../../assets/logo2.png";
-import LogoFooter from "../../assets/logo_footer.png";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -18,11 +17,15 @@ const NavBar = () => {
   const [visible, setVisible] = useState(true);
   const [isFirstPage, setIsFirstPage] = useState(true);
   const location = useLocation();
+  const locationPath = location.pathname;
 
+  const locationPathName = locationPath === "/details" ? "/details" : locationPath === "/courseDetails" ? "/courseDetails" : "";
 
-useEffect(() => {
-  AOS.init({ duration: 800, once: true });
-}, [navToggle])
+  const pathName = locationPath !== locationPathName;
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, [navToggle]);
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -47,31 +50,22 @@ useEffect(() => {
 
   const navLinks = [
     { path: "/", label: "الرئيسية" },
-    { path: "/الدورات", label: "الدورات" },
-    { path: "/المدربين", label: "المدربين" },
-    { path: "/من_نحن", label: "من نحن" },
-    { path: "/إتصل_بنا", label: "إتصل بنا" },
+    { path: "/courses", label: "الدورات" },
+    { path: "/trainers", label: "المدربين" },
+    { path: "/aboutUs", label: "من نحن" },
+    { path: "/callUs", label: "إتصل بنا" },
   ];
+
 
   return (
     <nav
-    className={`relative z-50 py-2 ${
-      visible ? `${isFirstPage ? "" : "bg-white shadow"}` : "hidden"
-    }`}
+      className={`relative z-50 py-2 ${
+        visible ? `${isFirstPage && pathName ? "" : "bg-white shadow"}` : "hidden"
+      }`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
-          <div>
-            {isFirstPage ? (
-              <a href="/">
-                <img src={Logo} alt="logo" width={150} />
-              </a>
-            ) : (
-              <a href="/">
-                <img src={LogoFooter} alt="logo" width={100} />
-              </a>
-            )}
-          </div>
+        <img src={Logo} alt="logo" className={`${isFirstPage && pathName ? "w-36" : "w-24"}`} />
           <ul
             className={`${
               navToggle ? "grid" : "hidden lg:grid"
@@ -85,25 +79,25 @@ useEffect(() => {
                     size="28"
                     className="w-full static lg:hidden"
                   />
-                ) : link.path === "/الدورات" ? (
+                ) : link.path === "/courses" ? (
                   <MdCastForEducation
                     size="28"
                     className="w-full static lg:hidden"
                   />
-                ) : link.path === "/المدربين" ? (
+                ) : link.path === "/trainers" ? (
                   <LiaChalkboardTeacherSolid
                     size="28"
                     className="w-full static lg:hidden"
                   />
-                ) : link.path === "/من_نحن" ? (
+                ) : link.path === "/aboutUs" ? (
                   <FaUsersLine size="28" className="w-full static lg:hidden" />
-                ) : link.path === "/إتصل_بنا" ? (
+                ) : link.path === "/callUs" ? (
                   <BiPhoneCall size="28" className="w-full static lg:hidden" />
                 ) : null}
                 <Link
                   to={link.path}
                   className={`font-semibold text-lg ${
-                    location.pathname == link.path
+                    locationPath == link.path
                       ? "border-b-2 border-mainBlack"
                       : ""
                   }`}
@@ -114,7 +108,7 @@ useEffect(() => {
             ))}
             <li className="col-span-1 lg:col-span-2 text-center w-max m-auto nav_list">
               <Link
-                to="/التسجيل"
+                to="/signIn"
                 className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row"
               >
                 <FaRegUserCircle className="w-full size-7 mb-1 lg:size-5 lg:mb-0" />
@@ -140,3 +134,4 @@ useEffect(() => {
 };
 
 export default NavBar;
+
