@@ -10,6 +10,9 @@ import { BiPhoneCall } from "react-icons/bi";
 import Logo from "../../assets/logo2.png";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { t } from "i18next";
+import { useIsRTL } from "../../hooks/useIsRTL";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -19,7 +22,12 @@ const NavBar = () => {
   const location = useLocation();
   const locationPath = location.pathname;
 
-  const locationPathName = locationPath === "/details" ? "/details" : locationPath === "/courseDetails" ? "/courseDetails" : "";
+  const locationPathName =
+    locationPath === "/details"
+      ? "/details"
+      : locationPath === "/courseDetails"
+      ? "/courseDetails"
+      : "";
 
   const pathName = locationPath !== locationPathName;
 
@@ -49,23 +57,41 @@ const NavBar = () => {
   }, [scrollPosition]);
 
   const navLinks = [
-    { path: "/", label: "الرئيسية" },
-    { path: "/courses", label: "الدورات" },
-    { path: "/trainers", label: "المدربين" },
-    { path: "/aboutUs", label: "من نحن" },
-    { path: "/callUs", label: "إتصل بنا" },
+    { path: "/", label: t("Main") },
+    { path: "/courses", label: t("Courses") },
+    { path: "/trainers", label: t("Trainers") },
+    { path: "/aboutUs", label: t("About us") },
+    { path: "/callUs", label: t("Call us") },
   ];
 
+  const isRTL = useIsRTL();
+
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    document.documentElement.lang = isRTL ? "ar" : "en";
+  }, [isRTL]);
+
+  const toggleLang = () => {
+    i18n.changeLanguage(isRTL ? "en" : "ar");
+  };
 
   return (
     <nav
       className={`relative z-50 py-2 ${
-        visible ? `${isFirstPage && pathName ? "" : "bg-white shadow"}` : "hidden"
+        visible
+          ? `${isFirstPage && pathName ? "" : "bg-white shadow"}`
+          : "hidden"
       }`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
-        <img src={Logo} alt="logo" className={`${isFirstPage && pathName ? "w-36" : "w-24"}`} />
+          <img
+            src={Logo}
+            alt="logo"
+            className={`${isFirstPage && pathName ? "w-36" : "w-24"}`}
+          />
           <ul
             className={`${
               navToggle ? "grid" : "hidden lg:grid"
@@ -106,14 +132,22 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto nav_list">
+            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-4">
               <Link
                 to="/signIn"
-                className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row"
+                className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row nav_list"
               >
                 <FaRegUserCircle className="w-full size-7 mb-1 lg:size-5 lg:mb-0" />
-                <span>تسجيل / دخول</span>
+                <span>{t("Login")}</span>
               </Link>
+
+              <button
+                type="button"
+                className="animate_from_top  animation_delay-3 text-white bg-mainOrange hover:bg-orange-300 transition-all duration-200 text-base w-8 h-8 py-[1px] px-[4px] rounded-md font-normal"
+                onClick={() => toggleLang()}
+              >
+                {isRTL ? "Ar" : "En"}
+              </button>
             </li>
           </ul>
           <button
@@ -134,4 +168,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

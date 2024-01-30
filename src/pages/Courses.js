@@ -4,6 +4,7 @@ import CoursesImg from "../assets/landingHome.png"
 import Makeup from "../assets/mackup.jpeg"
 import Card from "../components/card/Card";
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
+import { t } from "i18next";
 
 const Courses = () => {
 
@@ -23,12 +24,12 @@ const Courses = () => {
   return (
     <main className="relative">
       <div className="landing_img h-full">
-        <LandingPages landingImage={CoursesImg} title="الدورات" main="الرئيسية" branch="الدورات" />
+        <LandingPages landingImage={CoursesImg} title="Courses" main="Main" branch="Courses" />
       </div>
       
       <div className="container mb-16">
         <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
-        أحدث الدورات
+          {t("Latest courses")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
           {newCourses.map((course) => (

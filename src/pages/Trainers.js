@@ -6,6 +6,7 @@ import Trainer_3 from "../assets/trainer_3.jpg";
 import LandingPages from "../components/landing/landingPages";
 import TrainersImg from "../assets/landingHome.png"
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
+import { t } from "i18next";
 
 const Trainers = () => {
 
@@ -42,15 +43,15 @@ const Trainers = () => {
       <div className="landing_img h-full">
         <LandingPages
           landingImage={TrainersImg}
-          title="المدربين"
-          main="الرئيسية"
-          branch="المدربين"
+          title="Trainers"
+          main="Main"
+          branch="Trainers"
         />
       </div>
 
       <div className="container mb-20">
         <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
-          أفضل المدربين
+          {t("The best trainers")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
           {BestTrainersData.map((course) => (
