@@ -30,7 +30,7 @@ const ButtonGoUp = () => {
     });
   };
 
-  const phoneNumber = "01069602992";
+  const phoneNumber = "+201069602992";
 
   const handleWhatsAppClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
