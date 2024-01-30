@@ -12,6 +12,7 @@ import Visa from "../../assets/visa.svg";
 import Master from "../../assets/master.svg";
 import Applepay from "../../assets/applepay.svg";
 import Googlepay from "../../assets/googlepay.svg";
+import { t } from "i18next";
 
 const Footer = () => {
   const location = useLocation();
@@ -25,7 +26,7 @@ const Footer = () => {
     <footer className="bg-mainBlack">
       <div className="container">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-5 md:grid-cols-2 text-center md:text-right">
+          <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-5 md:grid-cols-2 text-center md:text-start">
             <div className="col-span-1 lg:col-span-2">
               <a href="/" className="mb-6 text-sm font-semibold text-white">
                 <img
@@ -35,11 +36,8 @@ const Footer = () => {
                 />
               </a>
               <ul className="text-white font-medium">
-                <li className="my-4 pl-0 lg:pl-7">
-                  مركز تدريب معتمد ومرخص من المؤسسة العامة للتدريب التقني
-                  والمهني نقدم الدورات التدريبية التطويرية في المجال الصحي ومجال
-                  الإعلام التي تساهم في تطوير الكوادر البشرية لتكون مؤهله لبيئة
-                  العمل.
+                <li className="my-4 pe-0 lg:pe-7">
+                  {t("An accredited training center licensed by the General Organization for Technical and Vocational Training We offer development training courses in the health field and the media field Which contributes to developing human resources to be qualified for the work environment.")}
                 </li>
                 <li className="mb-4">
                   <ul className="flex items-center justify-center md:justify-start gap-4">
@@ -94,84 +92,84 @@ const Footer = () => {
                     </ul>
                   </li>
                 )}
-                <li className="mb-4 text-mainOrange">من الأحد الى الخميس</li>
+                <li className="mb-4 text-mainOrange">{t("From Sunday to Thursday")}</li>
                 <li className="mb-4 text-mainOrange">
-                  من الساعه 9 صباحا - 5 مساء
+                  {t("From 9 am - 5 pm")}
                 </li>
               </ul>
             </div>
             <div className="col-span-1">
               <h2 className="mb-6 font-semibold text-2xl text-white">
-                خدماتنا
+                {t("Our services")}
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
                   <Link to="/" className="footer_list">
-                    دورات فى المجال الصحى
+                    {t("Courses in the health field")}
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link to="/" className="footer_list">
-                    دورات فى مجال الاعلام
+                    {t("Courses in the field of media")}
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link to="/" className="footer_list">
-                    دورات فى المجالات العامه
+                    {t("Courses in general fields")}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="col-span-1">
               <h2 className="mb-6 font-semibold text-2xl text-white">
-                روابط هامة
+                {t("Important links")}
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
                   <a href="/terms_Conditions" className="footer_list">
-                    الشروط والأحكام
+                    {t("Terms and Conditions")}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/policies" className="footer_list">
-                    السياسات العامة
+                    {t("Public policies")}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/technical_support" className="footer_list">
-                    سياسة الدعم الفنى
+                    {t("Technical support policy")}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/callUs" className="footer_list">
-                    الشكاوى والأقتراحات
+                    {t("Complaints and suggestions")}
                   </a>
                 </li>
               </ul>
             </div>
             <div className="col-span-1">
               <h2 className="mb-6 font-semibold text-2xl text-white">
-                روابط الموقع
+                {t("Website links")}
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
                   <a href="/callUs" className="footer_list">
-                    إتصل بنا
+                    {t("Call us")}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/aboutUs" className="footer_list">
-                    من نحن
+                    {t("Abou us")}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/trainers" className="footer_list">
-                    المدربين
+                    {t("Trainers")}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/courses" className="footer_list">
-                    الدورات
+                    {t("Courses")}
                   </a>
                 </li>
               </ul>
@@ -180,12 +178,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="px-4 py-6 flex gap-2 items-center justify-center flex-col sm:flex-row text-white border-t-[1px] border-mainGray w-full text-sm">
-        جميع الحقوق محفوظة ©2024 | هذا القالب صنع{" "}
+        {t("All rights are save")} ©2024 | {t("This mold is made")}{" "}
         <span>
           <FaHeart size={20} className="fill-mainOrange" />
         </span>{" "}
         <p>
-          بواسطة <span>Hisham</span>
+          {t("by")} <span>Hisham</span>
         </p>
       </div>
     </footer>

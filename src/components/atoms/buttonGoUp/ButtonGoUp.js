@@ -42,7 +42,7 @@ const ButtonGoUp = () => {
       <div>
         <Link
           to={handleWhatsAppClick}
-          className={`bg-[#0cc344] text-white rounded-full p-3 fixed right-6 duration-300 shadow ${
+          className={`bg-[#0cc344] text-white rounded-full p-3 fixed right-4 duration-300 shadow ${
             showButton ? "bottom-20" : "bottom-6"
           }`}
           onClick={handleWhatsAppClick}
@@ -53,7 +53,7 @@ const ButtonGoUp = () => {
       <div>
         <button
           className={`bg-mainOrange text-white rounded-full p-3 fixed bottom-6 duration-300 shadow ${
-            showButton ? "right-6" : "-right-20"
+            showButton ? "right-4" : "-right-20"
           }`}
           onClick={scrollToTop}
         >

@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import NavBar from "../navBar/NavBar";
 import { Link } from "react-router-dom";
+import { t } from "i18next";
 
 const LandingPages = ({ landingImage, title, main, branch }) => {
   const [showContent, setShowContent] = useState(false);
@@ -30,12 +31,12 @@ const LandingPages = ({ landingImage, title, main, branch }) => {
       <div className="container">
         <div className="landing_content absolute w-max top-1/2 -translate-y-1/2 text-center md:text-right">
           <h2 className="font-bold text-4xl text-white mb-4">
-            {title}
+            {t(title)}
           </h2>
           <ul className="flex gap-2 text-white justify-center md:justify-start">
-            <li className="text-white font-bold cursor-pointer"><Link to="/">{main}</Link></li>
+            <li className="text-white font-bold cursor-pointer"><Link to="/">{t(main)}</Link></li>
             <li>|</li>
-            <li className="text-white rounded-xl font-bold cursor-pointer">{branch}</li>
+            <li className="text-white rounded-xl font-bold cursor-pointer">{t(branch)}</li>
           </ul>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { FaCirclePlay } from "react-icons/fa6";
 import VideoImg from "../../assets/videoImg.png";
 import { FaPlayCircle } from "react-icons/fa";
+import { t } from "i18next";
 
 const customStyles = {
   content: {
@@ -43,30 +44,28 @@ const LearnNewSkills = () => {
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-5">
           <div data-aos="zoom-in">
             <h2 className="text-3xl font-semibold">
-              تعلم مهارات جديدة عبر الإنترنت مع كبار المعلمين
+              {t("Learn new skills online with top teachers")}
             </h2>
             <p className="text-[#10285d] my-4">
-              تعلم مهارات جديدة تؤهلك لسوق العمل مع أفضل كوادر التدريب والتعليم
-              ..
+              {t("Learn new skills that qualify you for the labor market with the best training and education staff..")}
             </p>
             <ul className="my-10">
               <li className="flex gap-3">
                 <IoMdCheckmark size={26} className="fill-mainOrange" />
                 <p className="text-mianBlack">
-                  تقنيات فعالة فى التعليم متوافقة مع جميع الفئات العمرية .
+                  {t("Effective teaching techniques compatible with all age groups.")}
                 </p>
               </li>
               <li className="flex gap-3 my-4">
                 <IoMdCheckmark size={26} className="fill-mainOrange" />
                 <p className="text-mianBlack">
-                  انضم إلى ملايين الأشخاص من جميع أنحاء العالم للتعلم معًا.
+                    {t("Join millions of people from around the world to learn together.")}
                 </p>
               </li>
               <li className="flex gap-3">
                 <IoMdCheckmark size={26} className="fill-mainOrange" />
                 <p className="text-mianBlack">
-                  انضم إلى ملايين الأشخاص من جميع أنحاء العالم.التعلم عبر
-                  الإنترنت سهل وطبيعي.
+                  {t("Join millions of people from all over the world. Online learning is easy and natural.")}
                 </p>
               </li>
             </ul>

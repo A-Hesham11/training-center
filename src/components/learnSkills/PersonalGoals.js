@@ -1,5 +1,6 @@
 import React from "react";
 import PersonalGoalsImg from "../../assets/PersonalGoals.png";
+import { t } from "i18next";
 
 const PersonalGoals = () => {
   return (
@@ -11,14 +12,13 @@ const PersonalGoals = () => {
           </div>
           <div data-aos="zoom-in">
             <h2 className="text-3xl font-semibold">
-              اتخذ الخطوة التالية نحو أهدافك الشخصية والمهنية معنا.
+              {t("Take the next step towards your personal and professional goals with us.")}
             </h2>
             <p className="text-[#10285d] my-4">
-              طور ذاتك عن دريق باقة من أفضل الدورات التدريبية لتضمن تحقيق هدفك
-              بسهولة ويسر.
+              {t("Develop yourself through a package of the best training courses that ensure you achieve your goal easily and conveniently.")}
             </p>
             <button className="btn bg-mainOrange text-white py-4 px-6 rounded-lg font-bold">
-              سجل الان بالمجان
+              {t("Register now for free")}
             </button>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Books from "../../assets/books.svg"
 import Teacher from "../../assets/teacher.svg"
 import Clock from "../../assets/clock.svg"
+import { t } from 'i18next'
 
 const Introduction = () => {
 
@@ -10,22 +11,22 @@ const Introduction = () => {
             id: 1,
             image: Books,
             alt: "Books",
-            title: "60+ كورس متنوع",
-            desc: "كورسات متنوعة فى مختلف المجالات تؤهلك لسوق العمل.",
+            title: "60+ diverse courses",
+            desc: "Various courses in various fields prepare you for the labor market.",
         },
         {
             id: 2,
             image: Teacher,
             alt: "Teacher",
-            title: "باقة من أفضل المدربين",
-            desc: "لدينا مجموعة من أفضل الكوادر فى مجال التدريب .",
+            title: "A group of the best trainers",
+            desc: "We have a group of the best cadres in the field of training.",
         },
         {
             id: 3,
             image: Clock,
             alt: "Clock",
-            title: "إشتراك مدى الحياة",
-            desc: "إشتراكك يتضمن دخول مجانى للكورس مدى الحياة .",
+            title: "Lifetime subscription",
+            desc: "Your subscription includes free access to the course for life.",
         },
     ]
   return (
@@ -35,8 +36,8 @@ const Introduction = () => {
                 <div key={item.id} className='flex gap-5 items-center bg-white rounded-[20px] p-4 shadow-xl' data-aos="zoom-in-up">
                     <img src={item.image} alt={item.alt}/>
                     <div className='flex gap-1 flex-col'>
-                        <h2 className='font-bold text-xl text-mainBlack'>{item.title}</h2>
-                        <p className='text-[17px] text-mainBlack'>{item.desc}</p>
+                        <h2 className='font-bold text-xl text-mainBlack'>{t(item.title)}</h2>
+                        <p className='text-[17px] text-mainBlack'>{t(item.desc)}</p>
                     </div>
                 </div>
             ))}

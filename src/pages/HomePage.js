@@ -12,6 +12,7 @@ import Trainer_2 from "../assets/trainer_2.jpg";
 import Trainer_3 from "../assets/trainer_3.jpg";
 import PersonalGoals from "../components/learnSkills/PersonalGoals";
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
+import { t } from "i18next";
 
 const HomePage = () => {
   const goodCourses = [
@@ -75,19 +76,21 @@ const HomePage = () => {
           className="text-mainBlack mb-14 font-semibold text-5xl text-center"
           data-aos="fade-down"
         >
-          دورات مميزة
+          {t("Distinctive courses")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
-          {goodCourses.map((course) => (
-            <Card
-              id={course.id}
-              image={course.image}
-              alt={course.alt}
-              title={course.title}
-              price={course.price}
-              titleBtn={course.titleBtn}
-              link="/details"
-            />
+          {goodCourses.map((course, index) => (
+            <div key={index}>
+              <Card
+                id={course.id}
+                image={course.image}
+                alt={course.alt}
+                title={course.title}
+                price={course.price}
+                titleBtn={course.titleBtn}
+                link="/details"
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -101,17 +104,19 @@ const HomePage = () => {
           className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center"
           data-aos="fade-down"
         >
-          أفضل المدربين
+         {t("The best trainers")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
-          {BestTrainersData.map((course) => (
-            <BestTrainers
-              id={course.id}
-              trainerImage={course.trainerImage}
-              alt={course.alt}
-              trainerName={course.trainerName}
-              trainerInfo={course.trainerInfo}
-            />
+          {BestTrainersData.map((course, index) => (
+            <div key={index}>
+              <BestTrainers
+                id={course.id}
+                trainerImage={course.trainerImage}
+                alt={course.alt}
+                trainerName={course.trainerName}
+                trainerInfo={course.trainerInfo}
+              />
+            </div>
           ))}
         </div>
       </div>
