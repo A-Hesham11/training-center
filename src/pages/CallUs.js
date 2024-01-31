@@ -7,6 +7,7 @@ import { FaMobileScreenButton } from "react-icons/fa6";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
 import { HiOutlineMail } from "react-icons/hi";
+import { t } from "i18next";
 
 const CallUs = () => {
   const [formData, setFormData] = useState({
@@ -35,9 +36,9 @@ const CallUs = () => {
       <div className="landing_img h-full">
         <LandingPages
           landingImage={CoursesImg}
-          title="إتصل بنا"
-          main="الرئيسية"
-          branch="إتصل بنا"
+          title="Call us"
+          main="Main"
+          branch="Call us"
         />
       </div>
 
@@ -46,7 +47,7 @@ const CallUs = () => {
           className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center"
           data-aos="fade-down"
         >
-          تواصل معنا
+          {t("Call us")}
         </h2>
         <div className="grid grid-cols-12 gap-0 md:gap-8">
           <form onSubmit={handleSubmit} className="col-span-12 md:col-span-full lg:col-span-7" data-aos="zoom-in">
