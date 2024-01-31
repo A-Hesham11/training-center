@@ -8,6 +8,7 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
 import { HiOutlineMail } from "react-icons/hi";
 import { t } from "i18next";
+import { useIsRTL } from "../hooks/useIsRTL";
 
 const CallUs = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ const CallUs = () => {
     email: "",
     subject: "",
   });
+
+  const isRTL = useIsRTL()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +47,7 @@ const CallUs = () => {
 
       <div className="container mb-16">
         <h2
-          className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center"
+          className="text-mainBlack mt-28 mb-16 font-semibold text-5xl text-center"
           data-aos="fade-down"
         >
           {t("Call us")}
@@ -64,7 +67,7 @@ const CallUs = () => {
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
-                  <label>رسالتك</label>
+                  <label className={`${isRTL ? "right-5" : "left-5"}`}>{t("Your letter")}</label>
                 </div>
               </div>
               <div className="col-12 my-6">
@@ -77,10 +80,10 @@ const CallUs = () => {
                         placeholder=" "
                         type="text"
                         name="name"
-                        value={formData.uname}
+                        value={formData.name}
                         onChange={handleChange}
                       />
-                      <label>الإسم</label>
+                      <label className={`${isRTL ? "right-5" : "left-5"}`}>{t("Name")}</label>
                     </div>
                   </div>
                   <div className="w-full">
@@ -94,7 +97,7 @@ const CallUs = () => {
                         value={formData.email}
                         onChange={handleChange}
                       />
-                      <label>البريد الإلكترونى</label>
+                      <label className={`${isRTL ? "right-5" : "left-5"}`}>{t("E-mail")}</label>
                     </div>
                   </div>
                 </div>
@@ -106,7 +109,7 @@ const CallUs = () => {
                 type="submit"
                 className="btn bg-mainOrange text-white py-4 px-16 rounded-lg font-bold"
               >
-                إرسال
+                {t("Send")}
               </button>
             </div>
           </form>
@@ -117,17 +120,17 @@ const CallUs = () => {
             </div>
             <div className="flex items-center gap-2 my-4">
               <FaRegCalendarDays size={26}/>
-              <p className="font-semibold text-xl">من الأحد الى الخميس</p>
+              <p className="font-semibold text-xl">{t("From Sunday to Thursday")}</p>
             </div>
             <div className="flex items-center gap-2">
               <LuAlarmClock size={27}/>
-              <p className="font-semibold text-xl">من الساعه 9 صباحا - 5 مساء</p>
+              <p className="font-semibold text-xl">{t("From 9 am - 5 pm")}</p>
             </div>
             <div className="flex items-center gap-2 my-4">
               <HiOutlineMail size={27}/>
               <p className="font-semibold text-xl">advance.skills3@gmail.com</p>
             </div>
-            <p className="font-semibold text-xl text-mainOrange">يسعدنا خدمتكم فى أى وقت !</p>
+            <p className="font-semibold text-xl text-mainOrange">{t("We are happy to serve you at any time!")}</p>
           </div>
         </div>
       </div>

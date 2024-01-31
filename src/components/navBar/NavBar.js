@@ -132,13 +132,13 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-4">
+            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-5">
               <Link
                 to="/signIn"
-                className="flex flex-col items-center gap-0 lg:gap-3 lg:flex-row nav_list"
+                className="flex flex-col items-center gap-0 lg:gap-2 lg:flex-row nav_list"
               >
                 <FaRegUserCircle className="w-full size-7 mb-1 lg:size-5 lg:mb-0" />
-                <span>{t("Login")}</span>
+                <span className="font-semibold">{t("Login")}</span>
               </Link>
 
               <button
@@ -161,6 +161,7 @@ const NavBar = () => {
               }`}
             />
           </button>
+          
         </div>
       </div>
     </nav>
