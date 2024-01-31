@@ -213,7 +213,6 @@ body {
   pointer-events: none;
   position: absolute;
   top: calc(50% - 10px);
-  right: 15px;
   transition: all 0.1s linear;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;

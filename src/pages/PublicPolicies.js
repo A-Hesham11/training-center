@@ -4,123 +4,97 @@ import LandingPages from "../components/landing/landingPages";
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { t } from "i18next";
+import { useIsRTL } from "../hooks/useIsRTL";
 
 const PublicPolicies = () => {
+
+  const isRTL = useIsRTL()
+
   return (
     <main className="relative">
       <div className="landing_img h-full">
         <LandingPages
           landingImage={PoliciesImg}
-          title="السياسات العامة"
-          main="الرئيسية"
-          branch="السياسات العامة"
+          title={t("Public policies")}
+          main={t("Main")}
+          branch={t("Public policies")}
         />
       </div>
 
       <div className="container my-20">
         <div data-aos="fade-up">
           <p className="font-semibold text-xl my-2 text-mainBlack">
-            سياسة النزاهة
+            {t("Integrity Policy")}
           </p>
           <p className="text-mainBlack text-lg my-2">
-            سياسات وقوانين النزاهة وأهمية الالتزام بها:
+            {t("Integrity policies and laws and the importance of adhering to them:")}
           </p>
           <ul className="list_style text-mainBlack text-lg">
             <li>
-              النزاهة مطلب أساسي في جميع التعاملات داخل الجهة والتي تؤكد على
-              أهمية الصدق والأمانة على كل فرد في البيئة التدريبية الإلكترونية من
-              مدربين ومتدربين وإداريين.
+              {t("Integrity is a basic requirement in all dealings within the entity, which emphasizes the importance of honesty and honesty for every individual in the electronic training environment, including trainers, trainees, and administrators.")}
             </li>
             <li>
-              ومن منطلق الحفاظ على القيم الأخلاقية العلمية والمهنية التي يحثنا
-              عليها ديننا الحنيف، ويعمل مركز مهارات متقدمة للتدريب دوما علي
-              تعزيزها في بيئته التدريبية من خلال التشديد الدائم علي الالتزام
-              بأعلى معايير النزاهة سواء من جهة المدربين والعاملين بالمركز أو
-              المتدربين، حيث يتولى مركز مهارات متقدمة للتدريب مسئولية تهيئة بيئة
-              تتوافر بها مستويات رفيعة من النزاهة من خلال وضع معايير وضوابط
-              للعملية التدريبية تعمل علي تحقيق النزاهة في كافة مراحل العملية
-              التدريبية بداية من تسجيل المتدربين بالبرامج التدريبية أو أثناء
-              التدريب أو في مرحلة الاختبارات والنتائج، حيث يؤمن مركزنا بأن تعزيز
-              النزاهة تمثل جزءًا أساسيًا من النمو الشخصي والفكري للمتدرب، وأن
-              زيادة وعي المتدرب والمدربون والموظفين بالقضايا ذات الصلة بالنزاهة
-              من خلال تعزيز مناخ تسوده روح الثقة والأمانة والمعايير الأخلاقية
-              الرفيعة يساهم بدور رئيس في تقدم المجتمع وازدهاره من خلال تخريج
-              كوادر قادرة علي تحمل مسئولية تقدم ورفعة الوطن نظرا لما تتمتع به من
-              القيم الأخلاقية العالية.
+              {t("From the standpoint of preserving the scientific and professional moral values that our true religion urges us to, the Advanced Skills Training Center always works to enhance them in its training environment through constant emphasis on commitment to the highest standards of integrity, whether on the part of trainers, center workers or trainees, as the Advanced Skills Training Center assumes responsibility Creating an environment in which high levels of integrity are available by establishing standards and controls for the training process that work to achieve integrity in all stages of the training process, starting with the registration of trainees in training programs, during training, or in the testing and results phase, as our center believes that enhancing integrity represents an essential part of growth. The trainee’s personal and intellectual experience, and that increasing the trainee’s, trainers’ and employees’ awareness of issues related to integrity by promoting a climate in which the spirit of trust, honesty and high ethical standards prevail contributes a major role to the progress and prosperity of society by graduating cadres capable of bearing responsibility for the progress and elevation of the nation due to their moral values. The high.")}
             </li>
           </ul>
         </div>
 
         <div data-aos="fade-up">
           <p className="font-semibold text-xl my-2 text-mainBlack">
-            أشكال انتهاك النزاهة:
+            {t("Forms of integrity violation:")}
           </p>
           <ul className="list_style text-mainBlack text-lg">
             <li>
-              الغش: وهو نقل أعمال الآخرين والاستخدام غير المصرح به لأي معلومات
-              ومواد تدريبية في الاختبارات الأكاديمية أو غيرها من المهام الموكلة
-              للمتدربين.
+              {t("Cheating: This is the transfer of the work of others and the unauthorized use of any information and training materials in academic tests or other tasks assigned to trainees.")}
             </li>
             <li>
-              الانتحال الأدبي والسرقة الفكرية: وهي استخدام عمل الأخرين كأنه عمل
-              الشخص، دون الإشارة إلي صاحب العمل الأصلي.
+              {t("Plagiarism and intellectual theft: which is using the work of others as if it were one's own work, without mentioning the original author.")}
             </li>
             <li>
-              استغلال التعاون: اعتماد المتدرب على متدرب آخر ضمن مجموعته لإنجاز
-              واجب أو عمل مشترك، أو استغلال متدرب آخر لإنجاز الواجبات الفردية
+              {t("Exploiting cooperation: The trainee relying on another trainee within his group to accomplish a joint task or work, or exploiting another trainee to accomplish individual duties")}
             </li>
-            <li>التلفيق والتزوير:</li>
-            <ul className="list-[arabic-indic] flex flex-col gap-1">
+            <li>{t("Fabrication and forgery:")}</li>
+            <ul className={`${isRTL ? "list-[arabic-indic]" : "list-decimal"} flex flex-col gap-1`}>
               <li>
-                إقدام المتدرب على تغيير المعلومات المتاحة له أو تلفيقها في
-                اختبار أو واجب، أو إحضاره لشهادة طبية مزوّرة من أجل التغيب عن
-                الحضور.
+                {t("The trainee changes or fabricates the information available to him in a test or assignment, or brings a forged medical certificate in order to be absent from attendance.")}
               </li>
               <li>
-                تلقي المتدرب اي مساعدة في الاختبارات أو تقديم معلومات لمتدرب
-                آخر او احضار أوراق خارجية في الاختبار والحصول على معلومات لم
-                تقدم من قبل معدي الاختبار.
+                {t("The trainee receives any assistance in the tests, provides information to another trainee, or brings external papers to the test and obtains information that was not provided by the test preparer.")}
               </li>
               <li>
-                الحصول او تقديم مساعدة غير مصرح بها في الامتحانات، أو تلفيق
-                المعلومات لدعم نتائج المختبر او اي من الأعمال الأخرى.
+                {t("Obtaining or providing unauthorized assistance in examinations, or fabricating information to support laboratory results or other actions.")}
               </li>
             </ul>
             <li>
-              انتحال شخصية الغير: ادعاء المتدرب صفة غيره داخل الصف، أو في اختبار
-              أو امتحان، أو في أي نوع من الواجبات الأكاديمية. وفي هذه الحالة،
-              تتم معاقبة المتدرب المنتحل شخصية غيره، والمتدرب الدافع للانتحال
+              {t("Impersonating others: The trainee pretending to be someone else in class, in a test or exam, or in any type of academic assignment. In this case, the trainee who impersonates another person and the trainee who motivates the impersonation will be punished")}
             </li>
           </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
           <p className="font-semibold text-xl my-2 text-mainBlack">
-            الإجراءات والعقوبات التي يتخذها مركز مهارات متقدمة للتدريب عند
-            انتهاك النزاهة في بيئة التدريب الإلكتروني، وكذلك للحد من الوقوع في
-            مثل هذه الانتهاكات:
+            {t("الإجراءات والعقوبات التي يتخذها مركز مهارات متقدمة للتدريب عند انتهاك النزاهة في بيئة التدريب الإلكتروني، وكذلك للحد من الوقوع في مثل هذه الانتهاكات:")}
           </p>
           <p className="text-mainGray text-lg mb-2">
-            في حالة انتحال الهوية أو الغش يحق للجنة التأديب بعد تثبتها من
-            المخالفات المحالة إليها، الإيقاع بواحدة أو أكثر من العقوبات التالية:
+            {t("In the event of impersonation or fraud, the Disciplinary Committee has the right, after verifying the violations referred to it, to impose one or more of the following penalties:")}
           </p>
           <ul className="list_style text-mainGray text-lg">
-            <li>التنبيه شفهياً وتوثيق ذلك بتعهد خطي أو الإنذار كتابة.</li>
-            <li>التوقيف المؤقت للحساب والحرمان من التمتع بخدمات المنصة.</li>
-            <li>إلغاء اختبار الدورة في حالات الغش</li>
-            <li>عدم استرجاع المبلغ المدفوع في الدورة</li>
-            <li>حرمان المتدرب من استلام شهادته</li>
+            <li>{t("Warning verbally and documenting this with a written pledge or warning in writing.")}</li>
+            <li>{t("Temporary suspension of the account and deprivation of enjoying the platform’s services.")}</li>
+            <li>{t("Canceling the course test in cases of cheating")}</li>
+            <li>{t("The amount paid for the course will not be refunded")}</li>
+            <li>{t("Depriving the trainee of receiving his certificate")}</li>
           </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
           <p className="font-semibold text-xl my-2 text-mainBlack">
-            سياسة حقوق الملكية الفكرية وحقوق النشر
+            {t("Intellectual property rights and copyright policy")}
           </p>
           <ul className="list_style text-lg text-mainGray">
             <li>
-              تعهد: نتعهد نحن مركز مهارات متقدمة للتدريب في الالتزام ونشر مبادئ
-              حقوق الملكية الفكرية وحقوق النشر
+              {t("Pledge: We, the Advanced Skills Center for Training, pledge to adhere to and disseminate the principles of intellectual property rights and copyrights")}
             </li>
           </ul>
         </div>

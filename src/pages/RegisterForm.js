@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa";
 import Logo from "../assets/logo2.png";
+import { useIsRTL } from "../hooks/useIsRTL";
+import { t } from "i18next";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,8 @@ const RegisterForm = () => {
     password: "",
   });
   const [PassToggle, setPassToggle] = useState(false);
+
+  const isRTL = useIsRTL()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,7 +59,7 @@ const RegisterForm = () => {
             </Link>
 
             <h2 class="mb-4 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">
-              إنشاء حساب جديد
+              {t("Create a new account")}
             </h2>
           </div>
           <div className="flex flex-col gap-3">
@@ -64,14 +68,14 @@ const RegisterForm = () => {
                 htmlFor="name"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                الإسم
+                {t("Name")}
               </label>
               <div className="mt-2">
                 <input
                   id="name"
                   name="name"
                   type="name"
-                  placeholder="الإسم"
+                  placeholder={t("Name")}
                   required
                   value={formData.name}
                   onChange={handleChange}
@@ -85,14 +89,14 @@ const RegisterForm = () => {
                 htmlFor="email"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                البريد الإلكتروني
+                {t("E-mail")}
               </label>
               <div className="mt-2">
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="البريد الإلكتروني"
+                  placeholder={t("E-mail")}
                   required
                   value={formData.email}
                   onChange={handleChange}
@@ -107,7 +111,7 @@ const RegisterForm = () => {
                   htmlFor="password"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  الرقم السري
+                 {t("Password")}
                 </label>
               </div>
               <div className="mt-2 relative">
@@ -115,7 +119,7 @@ const RegisterForm = () => {
                   id="password"
                   name="password"
                   type={PassToggle ? "text" : "password"}
-                  placeholder="الرقم السري"
+                  placeholder={t("Password")}
                   required
                   value={formData.password}
                   onChange={handleChange}
@@ -124,13 +128,13 @@ const RegisterForm = () => {
                 {PassToggle ? (
                   <FaRegEye
                     size={22}
-                    className="absolute top-[30%] fill-gray-500 left-7 -translate-x-1/2 cursor-pointer"
+                    className={`absolute top-[30%] fill-gray-500 ${isRTL ? "left-7" : "right-2"} -translate-x-1/2 cursor-pointer`}
                     onClick={() => setPassToggle(!PassToggle)}
                   />
                 ) : (
                   <FaRegEyeSlash
                     size={22}
-                    className="absolute fill-gray-500 top-[30%] left-7 -translate-x-1/2 cursor-pointer"
+                    className={`absolute fill-gray-500 top-[30%] ${isRTL ? "left-7" : "right-2"} -translate-x-1/2 cursor-pointer`}
                     onClick={() => setPassToggle(!PassToggle)}
                   />
                 )}
@@ -142,23 +146,23 @@ const RegisterForm = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-xl bg-mainOrange px-3 py-2 text-base font-semibold text-white shadow hover:bg-[#ff9f67d1] hover:duration-500"
               >
-                إنشاء
+                {t("Create")}
               </button>
               <Link
                 to="/"
                 className="flex w-full justify-center rounded-xl bg-white border border-mainOrange px-3 py-2 text-base font-semibold text-mainOrange shadow hover:bg-[#f3f3f3e6] hover:duration-500"
               >
-                رجوع
+                {t("Back")}
               </Link>
             </div>
           </div>
           <div className="flex gap-1 text-sm mt-6 mb-1 justify-center">
-            <p className="text-mainGray">ليس لديك حساب؟</p>
+            <p className="text-mainGray">{t("Don't have an account?")}</p>
             <Link
               to="/signIn"
               className="text-[#dc715d] font-semibold hover:duration-500 nav_list login_list"
             >
-              تسجيل الدخول
+              {t("Sign in")}
             </Link>
           </div>
         </form>

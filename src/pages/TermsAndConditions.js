@@ -76,7 +76,7 @@ const TermsAndConditions = () => {
               "Products that are added by mistake or at an incorrect price, we have the right to cancel or reject the order whether the order has been confirmed or not, and if payment is made we will refund the full amount to the customer. Amendment to terms and conditions:"
             )}{" "}
             <span className="font-semibold text-lg text-mainBlack">
-              التعديل في الشروط والاحكام :
+              {t("Amendment to terms and conditions:")}
             </span>
           </p>
           <ul className="list_style text-lg text-mainGray">
