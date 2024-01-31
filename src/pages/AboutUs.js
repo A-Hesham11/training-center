@@ -4,6 +4,7 @@ import LandingPages from "../components/landing/landingPages";
 import { IoMdCheckmark } from "react-icons/io";
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
 import "aos/dist/aos.css";
+import { t } from "i18next";
 
 const AboutUs = () => {
   return (
@@ -11,92 +12,81 @@ const AboutUs = () => {
       <div className="landing_img h-full">
         <LandingPages
           landingImage={AboutUsImg}
-          title="من نحن"
-          main="الرئيسية"
-          branch="من نحن"
+          title="About us"
+          main="Main"
+          branch="About us"
         />
       </div>
 
       <div className="container my-20">
         <div data-aos="fade-up">
-          <h2 className="font-semibold text-xl my-2 text-mainBlack">من نحن؟</h2>
+          <h2 className="font-semibold text-xl my-2 text-mainBlack">
+            {t("About us")}
+          </h2>
           <ul className="list_style text-mainBlack text-lg">
-            <li>مركز مهارات متقدمة للتدريب</li>
+            <li>{t("Advanced skills training center")}</li>
             <li>
-              مركز تدريب معتمد ومرخص من المؤسسة العامة للتدريب التقني والمهني.
+              {t(
+                "An accredited training center licensed by the General Organization for Technical and Vocational Training."
+              )}
             </li>
             <li>
-              نؤمن بأهمية التدريب وتحقيقه للتغيير الإيجابي لذلك نعمل على تقديم
-              الدورات التدريبية التطويرية المتكاملة لعملائنا التي تساهم في تطوير
-              الكوادر البشرية لتكون مؤهله لبيئة العمل.
+                {t("An accredited training center licensed by the General Organization for Technical and Vocational Training We offer development training courses in the health field and the media field Which contributes to developing human resources to be qualified for the work environment.")}
             </li>
           </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
-          <h2 className="font-semibold text-xl my-2 text-mainBlack">الرؤية:</h2>
+          <h2 className="font-semibold text-xl my-2 text-mainBlack">{t("Vision")}:</h2>
           <ul className="list_style text-mainGray text-lg">
             <li>
-              أن يكون مركز متميز ومتطور محليا وإقليميا في مجال التدريب، ويساهم
-              في بناء وتطوير قدرات الموظفين في تقديم جميع الحلول التدريبية بما
-              يتلاءم مع ما يتطلبه سوق العمل ويحقق أهدافه.
+                {t("To be a distinguished and advanced center locally and regionally in the field of training, and contribute to building and developing employees’ capabilities in providing all training solutions in line with what the labor market requires and achieves its goals.")}
             </li>
           </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
           <h2 className="font-semibold text-xl my-2 text-mainBlack">
-            الرسالة:
+            {t("The message:")}
           </h2>
           <ul className="list_style text-lg text-mainGray">
             <li className="text-lg">
-              توفير برامج واستشارات تدريبية متميزة وفقا للمقاييس العالمية للجودة
-              لإعداد وتأهيل الكوادر البشرية في العديد من المجالات بالإضافة إلى
-              تحسين جودة الأداء في القطاعين الخاص والعام بالتدريب والتطوير بهدف
-              الوصول الى اداء أفضل يساعد على تحقيق اهداف المجتمع.
+                {t("Providing distinguished training programs and consultations in accordance with international quality standards to prepare and qualify human cadres in many fields, in addition to improving the quality of performance in the private and public sectors through training and development with the aim of reaching better performance that helps achieve the goals of society.")}
             </li>
           </ul>
         </div>
 
         <div className="mt-6" data-aos="fade-up">
           <h2 className="font-semibold text-xl my-2 text-mainBlack">
-            اهدافنا:
+            {t("Our goals:")}
           </h2>
           <ul className="list_style text-lg text-mainGray">
             <li>
-              يهدف المركز إلى تقديم خدمات تدريبية مميزة للمؤسسات والافراد بكفاءة
-              وفاعلية واحترافية عالية على النحو التالي: –
+                {t("The center aims to provide distinguished training services to institutions and individuals with high efficiency, effectiveness and professionalism as follows: –")}
             </li>
             <li>
-              إعداد الخطط التدريبية على أسس علمية مدروسة تلبي احتياجات المجتمع
-              والمؤسسات العامة بالدولة.
+                {t("Preparing training plans on thoughtful scientific foundations that meet the needs of society and public institutions in the country.")}
             </li>
             <li>
-              اعداد برامج تدريبية وفق الاحتياجات المطلوبة لتنمية المهارات
-              والقدرات لأفراد القطاعين: العام والخاص وتلبي حاجة السوق والمجتمع.
+                {t("Providing training and consulting proposals to relevant authorities in accordance with applicable regulations.")}
             </li>
             <li>
-              تقديم المقترحات التدريبية والاستشارية للجهات ذات العلاقة وفق
-              الأنظمة المعمول بها.
+                {t("Providing training and consulting proposals to relevant authorities in accordance with applicable regulations.")}
             </li>
             <li>
-              التطوير الدائم والمستمر للبرامج التدريبية في ضوء الاحتياجات، وآراء
-              الفئات المستهدفة.
+                {t("Permanent and continuous development of training programs in light of the needs and opinions of the target groups.")}
             </li>
             <li>
-              تعزيز مفهوم الشراكة والتعاون مع المؤسسات التدريبية المحلية
-              والدولية وفق التشريعات المنظمة.
+                {t("Strengthening the concept of partnership and cooperation with local and international training institutions in accordance with regulating legislation.")}
             </li>
             <li>
-              السعي وراء الحصول على الاعتماد الدولي لبرامج الدورات التدريبية
-              المنفذة داخل المركز.
+                {t("Striving to obtain international accreditation for the training course programs implemented within the center.")}
             </li>
             <li>
-              رفع كفاءة الأداء للمدربين والعاملين بالمركز بما يعزز الوضع
-              التنافسي للمركز.
+                {t("Raising the performance efficiency of the center’s trainers and employees in order to enhance the center’s competitive position.")}
             </li>
-            <li>توفير بيئة تدريبية متميزة .</li>
-            <li>نشر ثقافة التطوير والتعلم الذاتي.</li>
+            <li>{t("Providing a distinguished training environment.")}</li>
+            <li>{t("Spreading a culture of development and self-learning.")}</li>
           </ul>
         </div>
       </div>

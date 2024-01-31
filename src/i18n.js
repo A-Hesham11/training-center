@@ -9,7 +9,7 @@ i18n
     .use(initReactI18next)
     .init({
         // if i want to set initial value, otherwise remove this to be automatic
-        lng: "ar",
+        // lng: "ar",
         load: "languageOnly", // will prevent backend from loading en-US for example
         backend: {
             // loadPath: "/locales/{{lng}}/{{ns}}.json",
