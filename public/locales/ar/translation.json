@@ -4,11 +4,14 @@
   "Trainers": "المدربين",
   "About us": "من نحن",
   "Call us": "إتصل بنا",
+  "Recruitment":"التوظيف",
+  "Join our trainers":"إنضم لمدربينا",
   "Advanced skills training center": "مركز مهارات متقدمة للتدريب",
   "An accredited training center licensed by the General Organization for Technical and Vocational Training.":"مركز تدريب معتمد ومرخص من المؤسسة العامة للتدريب التقني والمهني.",
   "An accredited training center licensed by the General Organization for Technical and Vocational Training We offer development training courses in the health field and the media field Which contributes to developing human resources to be qualified for the work environment.": "مركز تدريب معتمد ومرخص من المؤسسة العامة للتدريب التقني والمهني نقدم الدورات التدريبية التطويرية في المجال الصحي ومجال الإعلام التي تساهم في تطوير الكوادر البشرية لتكون مؤهله لبيئة العمل.",
   "Educational platform":"المنصة التعليميه",
   "Login":"تسجيل دخول",
+  "ٌRegistration":"تسجيل",
   "60+ diverse courses":"60+ كورس متنوع",
   "Various courses in various fields prepare you for the labor market.":"كورسات متنوعة فى مختلف المجالات تؤهلك لسوق العمل.",
   "A group of the best trainers":"باقة من أفضل المدربين",
@@ -324,6 +327,15 @@
   "We are committed to providing health training courses and electronic manuals for programs used in electronic training environments for trainees.":"نلتزم بتوفير الدورات التدريبية الصحية والأدلة الإرشادية الإلكترونية للبرامج المستخدمة في بيئات التدريب الإلكتروني للمتدربين.",
   "We are committed to ensuring that trainers obtain professional certificates in the fields of e-learning.":"نلتزم بحصول المدربين على الشهادات الاحترافية في مجالات التعليم الإلكتروني.",
   "We are committed to ensuring that technicians, administrators, and technicians obtain professional certificates in the field of e-learning.":"نلتزم بحصول الفنيين والإداريين والتقنيين على الشهادات الاحترافية في مجال التعليم الإلكتروني.",
-  "We are committed to ensuring that the supervisory staff obtains professional certificates in the field of e-learning.":"نلتزم بحصول الكادر الإشرافي على الشهادات الاحترافية في مجال التعليم الإلكتروني."
-
+  "We are committed to ensuring that the supervisory staff obtains professional certificates in the field of e-learning.":"نلتزم بحصول الكادر الإشرافي على الشهادات الاحترافية في مجال التعليم الإلكتروني.",
+  "Certainly! When creating a Join Our Trainers page for your courses website, you'll want to attract potential trainers and provide them with information about the benefits of joining your platform. Here's a sample description you can use as a starting point: Join Our Trainers Are you passionate about sharing your expertise and empowering others through education? Join our vibrant community of educators and become a valued member of our team! As a dedicated platform for courses and learning, we are actively seeking experienced and enthusiastic trainers to contribute to our mission of fostering knowledge and skill development.":"هل أنت متحمس لمشاركة خبراتك وتمكين الآخرين من خلال التعليم؟ انضم إلى مجتمع المعلمين النابض بالحياة وكن عضوًا مهمًا في فريقنا! باعتبارنا منصة مخصصة للدورات والتعلم، فإننا نبحث بنشاط عن مدربين ذوي خبرة ومتحمسين للمساهمة في مهمتنا المتمثلة في تعزيز المعرفة وتنمية المهارات.",
+  "Join Our Trainers":"انضم إلى مدربينا",
+  "Are you passionate about revolutionizing education and empowering individuals to achieve their full potential? We're on a mission to build a world-class team that shares our commitment to innovation, learning, and positive impact. Explore exciting opportunities to join us in shaping the future of online education.":"هل أنت متحمس لإحداث ثورة في التعليم وتمكين الأفراد لتحقيق إمكاناتهم الكاملة؟ نحن في مهمة لبناء فريق عالمي المستوى يشاركنا التزامنا بالابتكار والتعلم والتأثير الإيجابي. اكتشف الفرص المثيرة للانضمام إلينا في تشكيل مستقبل التعليم عبر الإنترنت.",
+  "Saudi Arabia / Riyadh / Palm neighborhood":"السعودية/الرياض/حي النخيل",
+  "Our customers":"عملاؤنا",
+  "Welcome to the heart of our success - the stories of our valued clients. At Advanced skills training center, we take pride in the meaningful impact our courses have had on individuals and organizations. Explore the testimonials below to discover how our tailored solutions have transformed lives and careers.":"مرحبا بكم في قلب نجاحنا - قصص عملائنا الكرام. في مركز تدريب المهارات المتقدمة، نحن نفخر بالتأثير الهادف الذي أحدثته دوراتنا على الأفراد والمنظمات. استكشف الشهادات أدناه لتكتشف كيف أحدثت حلولنا المخصصة حياة ومهنًا.",
+  "They said about us":"قالوا عنا",
+  "Include a variety of testimonials from different students, highlighting their diverse experiences and the impact your courses have had on them. Make sure to obtain permission to use their names and possibly include their photos for authenticity.":"قم بتضمين مجموعة متنوعة من الشهادات من طلاب مختلفين، مع تسليط الضوء على تجاربهم المتنوعة وتأثير دوراتك عليهم. تأكد من الحصول على إذن لاستخدام أسمائهم وربما تضمين صورهم للتأكد من صحتها.",
+  "Success Partners":"شركاء النجاح",
+  "We thank all our partners for their constant support and contribution to the success of our educational courses. If you would like to join our list of partners, do not hesitate to contact the Partnerships Team for more information.":"نشكر جميع شركائنا على دعمهم الدائم والمساهم في تحقيق نجاح دوراتنا التعليمية. إن كنتم ترغبون في الانضمام إلى قائمة شركائنا، ولا تترددوا في الاتصال بفريق الشراكات للمزيد من المعلومات."
 }

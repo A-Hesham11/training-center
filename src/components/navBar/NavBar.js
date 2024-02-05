@@ -13,6 +13,9 @@ import AOS from "aos";
 import { t } from "i18next";
 import { useIsRTL } from "../../hooks/useIsRTL";
 import { useTranslation } from "react-i18next";
+import { RiUserAddLine } from "react-icons/ri";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { PiUsersThreeBold } from "react-icons/pi";
 
 const NavBar = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -60,6 +63,8 @@ const NavBar = () => {
     { path: "/", label: t("Main") },
     { path: "/courses", label: t("Courses") },
     { path: "/trainers", label: t("Trainers") },
+    { path: "/JoinTrainers", label: t("Join our trainers") },
+    { path: "/recruitment", label: t("Recruitment") },
     { path: "/aboutUs", label: t("About us") },
     { path: "/callUs", label: t("Call us") },
   ];
@@ -95,11 +100,18 @@ const NavBar = () => {
           <ul
             className={`${
               navToggle ? "grid" : "hidden lg:grid"
-            } grid-cols-2 lg:grid-cols-7 md:grid-cols-6 items-center gap-6 navbar`}
+            } grid-cols-2 lg:grid-cols-10 md:grid-cols-8 items-center gap-y-6 navbar ps-16`}
             data-aos="zoom-in"
           >
             {navLinks.map((link) => (
-              <li key={link.path} className="text-center nav_list">
+              <li
+                key={link.path}
+                className={`text-center nav_list ${
+                  link.path === "/JoinTrainers"
+                    ? "col-span-1 lg:col-span-2"
+                    : ""
+                }`}
+              >
                 {link.path === "/" ? (
                   <IoHomeOutline
                     size="28"
@@ -115,8 +127,21 @@ const NavBar = () => {
                     size="28"
                     className="w-full static lg:hidden"
                   />
+                ) : link.path === "/JoinTrainers" ? (
+                  <RiUserAddLine
+                    size="28"
+                    className="w-full static lg:hidden"
+                  />
+                ) : link.path === "/recruitment" ? (
+                  <MdOutlineWorkOutline
+                    size="28"
+                    className="w-full static lg:hidden"
+                  />
                 ) : link.path === "/aboutUs" ? (
-                  <FaUsersLine size="28" className="w-full static lg:hidden" />
+                  <PiUsersThreeBold
+                    size="28"
+                    className="w-full static lg:hidden"
+                  />
                 ) : link.path === "/callUs" ? (
                   <BiPhoneCall size="28" className="w-full static lg:hidden" />
                 ) : null}
@@ -132,7 +157,7 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-5">
+            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-4 ps-1">
               <Link
                 to="/signIn"
                 className="flex flex-col items-center gap-0 lg:gap-2 lg:flex-row nav_list"
@@ -143,25 +168,33 @@ const NavBar = () => {
 
               <button
                 type="button"
-                className="animate_from_top  animation_delay-3 text-white bg-mainOrange hover:bg-orange-300 transition-all duration-200 text-base w-8 h-8 py-[1px] px-[4px] rounded-md font-normal"
+                className="animate_from_top hidden lg:block  animation_delay-3 text-white bg-mainOrange hover:bg-orange-300 transition-all duration-200 text-base w-8 h-8 py-[1px] px-[4px] rounded-md font-normal"
                 onClick={() => toggleLang()}
               >
                 {isRTL ? "Ar" : "En"}
               </button>
             </li>
           </ul>
-          <button
-            className="static lg:hidden"
-            onClick={() => setNavToggle(!navToggle)}
-          >
-            <LuLayoutGrid
-              size="34"
-              className={`cursor-pointer duration-500 hover:text-mainOrange hover:-rotate-45 ${
-                navToggle ? "-rotate-45 text-mainOrange" : ""
-              }`}
-            />
-          </button>
-          
+          <div className="flex gap-5">
+            <button
+              type="button"
+              className="animate_from_top block lg:hidden animation_delay-3 text-white bg-mainOrange hover:bg-orange-300 transition-all duration-200 text-base w-8 h-8 py-[1px] px-[4px] rounded-md font-normal"
+              onClick={() => toggleLang()}
+            >
+              {isRTL ? "Ar" : "En"}
+            </button>
+            <button
+              className="static lg:hidden"
+              onClick={() => setNavToggle(!navToggle)}
+            >
+              <LuLayoutGrid
+                size="34"
+                className={`cursor-pointer duration-500 hover:text-mainOrange hover:-rotate-45 ${
+                  navToggle ? "-rotate-45 text-mainOrange" : ""
+                }`}
+              />
+            </button>
+          </div>
         </div>
       </div>
     </nav>

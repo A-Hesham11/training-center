@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LogoFooter from "../../assets/logo_footer.png";
 import { FaTwitter } from "react-icons/fa";
 import { BiLogoTelegram } from "react-icons/bi";
@@ -13,20 +13,48 @@ import Master from "../../assets/master.svg";
 import Applepay from "../../assets/applepay.svg";
 import Googlepay from "../../assets/googlepay.svg";
 import { t } from "i18next";
+import { TfiWorld } from "react-icons/tfi";
+import { MdOutlineAccessTime } from "react-icons/md";
+import { BsCalendarDate } from "react-icons/bs";
+import { useIsRTL } from "../../hooks/useIsRTL";
 
 const Footer = () => {
   const location = useLocation();
   const locationPath = location.pathname;
 
-    const locationPathName = locationPath === "/details" ? "/details" : locationPath === "/courseDetails" ? "/courseDetails" : "";
+  const locationPathName =
+    locationPath === "/details"
+      ? "/details"
+      : locationPath === "/courseDetails"
+      ? "/courseDetails"
+      : "";
 
-    const pathName = locationPath === locationPathName;
+  const pathName = locationPath === locationPathName;
+
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+
+  const isRTL = useIsRTL();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form data submitted:", formData);
+  };
 
   return (
     <footer className="bg-mainBlack">
       <div className="container">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-5 md:grid-cols-2 text-center md:text-start">
+          <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-6 md:grid-cols-2 text-center md:text-start">
             <div className="col-span-1 lg:col-span-2">
               <a href="/" className="mb-6 text-sm font-semibold text-white">
                 <img
@@ -37,7 +65,9 @@ const Footer = () => {
               </a>
               <ul className="text-white font-medium">
                 <li className="my-4 pe-0 lg:pe-7">
-                  {t("An accredited training center licensed by the General Organization for Technical and Vocational Training We offer development training courses in the health field and the media field Which contributes to developing human resources to be qualified for the work environment.")}
+                  {t(
+                    "An accredited training center licensed by the General Organization for Technical and Vocational Training We offer development training courses in the health field and the media field Which contributes to developing human resources to be qualified for the work environment."
+                  )}
                 </li>
                 <li className="mb-4">
                   <ul className="flex items-center justify-center md:justify-start gap-4">
@@ -75,26 +105,54 @@ const Footer = () => {
                   <li className="mb-4">
                     <ul className="flex items-center justify-center md:justify-start gap-4">
                       <li>
-                        <img src={Mada} alt="Mada" className="w-14 h-8 bg-white border p-2 rounded-md" />
+                        <img
+                          src={Mada}
+                          alt="Mada"
+                          className="w-14 h-8 bg-white border p-2 rounded-md"
+                        />
                       </li>
                       <li>
-                        <img src={Visa} alt="Visa" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                        <img
+                          src={Visa}
+                          alt="Visa"
+                          className="w-14 h-8 bg-white border p-2 rounded-md"
+                        />
                       </li>
                       <li>
-                        <img src={Master} alt="Master" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                        <img
+                          src={Master}
+                          alt="Master"
+                          className="w-14 h-8 bg-white border p-2 rounded-md"
+                        />
                       </li>
                       <li>
-                        <img src={Applepay} alt="Applepay" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                        <img
+                          src={Applepay}
+                          alt="Applepay"
+                          className="w-14 h-8 bg-white border p-2 rounded-md"
+                        />
                       </li>
                       <li>
-                        <img src={Googlepay} alt="Googlepay" className="w-14 h-8 bg-white border p-2 rounded-md"/>
+                        <img
+                          src={Googlepay}
+                          alt="Googlepay"
+                          className="w-14 h-8 bg-white border p-2 rounded-md"
+                        />
                       </li>
                     </ul>
                   </li>
                 )}
-                <li className="mb-4 text-mainOrange">{t("From Sunday to Thursday")}</li>
-                <li className="mb-4 text-mainOrange">
-                  {t("From 9 am - 5 pm")}
+                <li className="mb-4 text-mainOrange flex items-center gap-3">
+                  <TfiWorld size={22} />
+                  <p>{t("Saudi Arabia / Riyadh / Palm neighborhood")}</p>
+                </li>
+                <li className="mb-4 text-mainOrange flex items-center gap-3">
+                  <BsCalendarDate size={22} />
+                  <p>{t("From Sunday to Thursday")}</p>
+                </li>
+                <li className="mb-4 text-mainOrange flex items-center gap-2">
+                  <MdOutlineAccessTime size={24} />
+                  <p>{t("From 9 am - 5 pm")}</p>
                 </li>
               </ul>
             </div>
@@ -117,6 +175,29 @@ const Footer = () => {
                   <Link to="/" className="footer_list">
                     {t("Courses in general fields")}
                   </Link>
+                </li>
+                <li className="mt-8 mb-4">
+                  <div className="form-group">
+                    <form onSubmit={handleSubmit}>
+                      <div className="flex justify-center md:justify-normal">
+                        <input
+                          className="border px-2 py-3 rounded-s-md placeholder:text-base"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder={t("E-mail")}
+                          value={formData.name}
+                          onChange={handleChange}
+                        />
+                        <button
+                          type="submit"
+                          className="bg-mainOrange text-white font-bold text-sm px-3 rounded-e-md"
+                        >
+                          {t("ٌRegistration")}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -147,7 +228,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 lg:col-span-2">
               <h2 className="mb-6 font-semibold text-2xl text-white">
                 {t("Website links")}
               </h2>
@@ -159,7 +240,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a href="/aboutUs" className="footer_list">
-                    {t("Abou us")}
+                    {t("About us")}
                   </a>
                 </li>
                 <li className="mb-4">
