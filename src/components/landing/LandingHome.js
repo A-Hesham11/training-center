@@ -27,7 +27,7 @@ const LandingHome = () => {
         <NavBar />
       </div>
       <div className="container">
-        <div className="landing_content absolute w-[90%] sm:w-min top-1/2 -translate-y-1/2 text-center lg:text-justify px-3">
+        <div className="landing_content absolute w-[90%] sm:w-min top-1/2 -translate-y-1/2 text-center md:text-justify px-3">
           <h2 className="title_animation font-bold text-4xl text-mainBlack mb-4">
             {t("Advanced skills training center")}
           </h2>

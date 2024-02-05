@@ -14,6 +14,8 @@ import SignInForm from "../../pages/SignInForm";
 import RegisterForm from "../../pages/RegisterForm";
 import CoursesDetails from "../../pages/CoursesDetails";
 import CourseDetails from "../../pages/CourseDetails";
+import JoinTrainers from "../../pages/JoinTrainers";
+import Recruitment from "../../pages/Recruitment";
 
 const AllRoutesProvider = () => {
   return (
@@ -129,6 +131,26 @@ const AllRoutesProvider = () => {
         element={
           <Fragment>
             <CourseDetails />
+            <Footer />
+          </Fragment>
+        }
+      />
+
+      <Route
+        path="/JoinTrainers"
+        element={
+          <Fragment>
+            <JoinTrainers />
+            <Footer />
+          </Fragment>
+        }
+      />
+
+      <Route
+        path="/recruitment"
+        element={
+          <Fragment>
+            <Recruitment />
             <Footer />
           </Fragment>
         }
