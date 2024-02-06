@@ -157,7 +157,7 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-4 ps-1">
+            <li className="col-span-1 lg:col-span-2 text-center w-max m-auto flex gap-3 ps-1">
               <Link
                 to="/signIn"
                 className="flex flex-col items-center gap-0 lg:gap-2 lg:flex-row nav_list"
@@ -175,7 +175,7 @@ const NavBar = () => {
               </button>
             </li>
           </ul>
-          <div className="flex gap-5">
+          <div className="flex gap-3">
             <button
               type="button"
               className="animate_from_top block lg:hidden animation_delay-3 text-white bg-mainOrange hover:bg-orange-300 transition-all duration-200 text-base w-8 h-8 py-[1px] px-[4px] rounded-md font-normal"
