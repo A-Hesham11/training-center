@@ -237,3 +237,31 @@ body {
 .table-container {
   overflow-x: auto; /* Enable horizontal scrolling */
 }
+
+.client_says .slick-list {
+  margin: 0px 20px !important;
+}
+.customer .slick-prev {
+  display: none;
+}
+.slick-slider svg {
+  color: #ff9f67 !important;
+  width: 50px;
+  height: 50px;
+}
+.slick-prev:before, .slick-next:before {
+  display: none;
+}
+
+.client_says .slick-dots li {
+  width: 35px !important;
+  height: 15px !important;
+}
+.client_says .slick-dots li.slick-active button:before {
+  color: #ff9f67 !important;
+
+}
+.client_says .slick-dots li button:before {
+  font-size: 10px;
+}
+

@@ -13,6 +13,9 @@ import Trainer_3 from "../assets/trainer_3.jpg";
 import PersonalGoals from "../components/learnSkills/PersonalGoals";
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
 import { t } from "i18next";
+import ClientSays from "../components/clientSays/ClientSays";
+import OurCustomers from "../components/ourCustomers/OurCustomers";
+import SuccessPartners from "../components/successPartners/SuccessPartners";
 
 const HomePage = () => {
   const goodCourses = [
@@ -121,53 +124,13 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className=" h-80 flex items-center">
-        <div className="container">
-          <h2
-            className="text-mainBlack mb-14 font-semibold text-5xl text-center"
-            data-aos="fade-down"
-          >
-            {t("Our customers")}
-          </h2>
-          <p className="text-xl font-medium text-mainBlack mb-2" data-aos="zoom-in-up">
-            {t(
-              "Welcome to the heart of our success - the stories of our valued clients. At Advanced skills training center, we take pride in the meaningful impact our courses have had on individuals and organizations. Explore the testimonials below to discover how our tailored solutions have transformed lives and careers."
-            )}
-          </p>
-        </div>
-      </div>
+      <OurCustomers />
 
-      <div className=" bg-[#cccccc2e] h-80 flex items-center">
-        <div className="container">
-          <h2
-            className="text-mainBlack mb-14 font-semibold text-5xl text-center"
-            data-aos="fade-down"
-          >
-            {t("They said about us")}
-          </h2>
-          <p className="text-xl font-medium text-mainBlack mb-2" data-aos="zoom-in-up">
-            {t(
-              "Include a variety of testimonials from different students, highlighting their diverse experiences and the impact your courses have had on them. Make sure to obtain permission to use their names and possibly include their photos for authenticity."
-            )}
-          </p>
-        </div>
-      </div>
+      <ClientSays />
 
-      <div className=" h-80 flex items-center">
-        <div className="container">
-          <h2
-            className="text-mainBlack mb-14 font-semibold text-5xl text-center"
-            data-aos="fade-down"
-          >
-            {t("Success Partners")}
-          </h2>
-          <p className="text-xl font-medium text-mainBlack mb-2" data-aos="zoom-in-up">
-            {t(
-              "We thank all our partners for their constant support and contribution to the success of our educational courses. If you would like to join our list of partners, do not hesitate to contact the Partnerships Team for more information."
-            )}
-          </p>
-        </div>
-      </div>
+      <SuccessPartners/>
+
+
 
       <div>
         <PersonalGoals />
