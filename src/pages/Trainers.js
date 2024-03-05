@@ -4,12 +4,11 @@ import Trainer_1 from "../assets/trainer_1.jpg";
 import Trainer_2 from "../assets/trainer_2.jpg";
 import Trainer_3 from "../assets/trainer_3.jpg";
 import LandingPages from "../components/landing/landingPages";
-import TrainersImg from "../assets/landingHome.png"
+import TrainersImg from "../assets/landingHome.png";
 import ButtonGoUp from "../components/atoms/buttonGoUp/ButtonGoUp";
 import { t } from "i18next";
 
 const Trainers = () => {
-
   const BestTrainersData = [
     {
       id: 1,
@@ -37,7 +36,6 @@ const Trainers = () => {
     },
   ];
 
-
   return (
     <main className="relative">
       <div className="landing_img h-full">
@@ -50,12 +48,16 @@ const Trainers = () => {
       </div>
 
       <div className="container mb-20">
-        <h2 className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center" data-aos="fade-down">
+        <h2
+          className="text-mainBlack mt-28 mb-14 font-semibold text-5xl text-center"
+          data-aos="fade-down"
+        >
           {t("The best trainers")}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
-          {BestTrainersData.map((course) => (
+          {BestTrainersData.map((course, index) => (
             <BestTrainers
+              key={index}
               id={course.id}
               trainerImage={course.trainerImage}
               alt={course.alt}
@@ -66,7 +68,7 @@ const Trainers = () => {
         </div>
       </div>
 
-      <ButtonGoUp/>
+      <ButtonGoUp />
     </main>
   );
 };

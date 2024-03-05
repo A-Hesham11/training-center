@@ -44,8 +44,9 @@ const CoursesDetails = () => {
         </p>
         <p className="text-mainGray mt-4 mb-5 font-semibold">الدورات</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
-          {goodCourses.map((course) => (
+          {goodCourses.map((course, index) => (
             <CardRegistration
+              key={index}
               id={course.id}
               image={course.image}
               alt={course.alt}
