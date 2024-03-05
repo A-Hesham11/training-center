@@ -106,54 +106,57 @@ const NavBar = () => {
             {navLinks.map((link) => (
               <li
                 key={link.path}
-                className={`text-center nav_list ${
+                className={`text-center nav_list w-fit m-auto ${
                   link.path === "/JoinTrainers"
                     ? "col-span-1 lg:col-span-2"
                     : ""
                 }`}
               >
-                {link.path === "/" ? (
-                  <IoHomeOutline
-                    size="28"
-                    className="w-full static lg:hidden"
-                  />
-                ) : link.path === "/courses" ? (
-                  <MdCastForEducation
-                    size="28"
-                    className="w-full static lg:hidden"
-                  />
-                ) : link.path === "/trainers" ? (
-                  <LiaChalkboardTeacherSolid
-                    size="28"
-                    className="w-full static lg:hidden"
-                  />
-                ) : link.path === "/JoinTrainers" ? (
-                  <RiUserAddLine
-                    size="28"
-                    className="w-full static lg:hidden"
-                  />
-                ) : link.path === "/recruitment" ? (
-                  <MdOutlineWorkOutline
-                    size="28"
-                    className="w-full static lg:hidden"
-                  />
-                ) : link.path === "/aboutUs" ? (
-                  <PiUsersThreeBold
-                    size="28"
-                    className="w-full static lg:hidden"
-                  />
-                ) : link.path === "/callUs" ? (
-                  <BiPhoneCall size="28" className="w-full static lg:hidden" />
-                ) : null}
                 <Link
                   to={link.path}
-                  className={`font-semibold text-lg ${
+                  className={`font-semibold text-lg  ${
                     locationPath == link.path
                       ? "border-b-2 border-mainBlack"
                       : ""
                   }`}
                 >
-                  {link.label}
+                  {link.path === "/" ? (
+                    <IoHomeOutline
+                      size="28"
+                      className="w-full static lg:hidden mb-1 lg:mb-0"
+                    />
+                  ) : link.path === "/courses" ? (
+                    <MdCastForEducation
+                      size="28"
+                      className="w-full static lg:hidden"
+                    />
+                  ) : link.path === "/trainers" ? (
+                    <LiaChalkboardTeacherSolid
+                      size="28"
+                      className="w-full static lg:hidden"
+                    />
+                  ) : link.path === "/JoinTrainers" ? (
+                    <RiUserAddLine
+                      size="28"
+                      className="w-full static lg:hidden"
+                    />
+                  ) : link.path === "/recruitment" ? (
+                    <MdOutlineWorkOutline
+                      size="28"
+                      className="w-full static lg:hidden"
+                    />
+                  ) : link.path === "/aboutUs" ? (
+                    <PiUsersThreeBold
+                      size="28"
+                      className="w-full static lg:hidden"
+                    />
+                  ) : link.path === "/callUs" ? (
+                    <BiPhoneCall
+                      size="28"
+                      className="w-full static lg:hidden"
+                    />
+                  ) : null}
+                  <span className="font-semibold">{link.label}</span>
                 </Link>
               </li>
             ))}
