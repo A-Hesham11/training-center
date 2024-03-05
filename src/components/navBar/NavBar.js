@@ -178,7 +178,7 @@ const NavBar = () => {
               </button>
             </li>
           </ul>
-          <div className="flex gap-3">
+          <div className="flex gap-3 static lg:hidden">
             <button
               type="button"
               className="animate_from_top block lg:hidden animation_delay-3 text-white bg-mainOrange hover:bg-orange-300 transition-all duration-200 text-base w-8 h-8 py-[1px] px-[4px] rounded-md font-normal"
