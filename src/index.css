@@ -159,7 +159,7 @@ body {
 .nav_list:after {
   content: "";
   pointer-events: none;
-  bottom: -4px;
+  bottom: -3px;
   left: 50%;
   position: absolute;
   width: 0%;
@@ -167,6 +167,7 @@ body {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
+  
 }
 .nav_list:after {
   background-color: #030304;
