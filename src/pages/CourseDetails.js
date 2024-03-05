@@ -90,8 +90,8 @@ const CourseDetails = () => {
               {courseDetails.info}
             </p>
             <div className="flex items-center gap-8">
-              {courseDetails.course_data.map((detail) => (
-                <div key={detail.id} data-aos="zoom-in-up">
+              {courseDetails.course_data.map((detail, index) => (
+                <div key={index} data-aos="zoom-in-up">
                   <h2 className="text-md text-mainBlack font-medium">
                     {detail.key}
                   </h2>

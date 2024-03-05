@@ -103,9 +103,9 @@ const NavBar = () => {
             } grid-cols-2 lg:grid-cols-10 md:grid-cols-8 items-center gap-y-6 navbar ps-16`}
             data-aos="zoom-in"
           >
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <li
-                key={link.path}
+                key={index}
                 className={`text-center nav_list w-fit m-auto ${
                   link.path === "/JoinTrainers"
                     ? "col-span-1 lg:col-span-2"
